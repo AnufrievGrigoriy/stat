@@ -1,0 +1,49 @@
+<<<<<<< HEAD
+--- 
+title: "Статистика, R и анализ данных"
+author: "Ануфриев Григорий"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+always_allow_html: yes
+description: "Конспекты занятий и задания"
+---
+
+# Дисклеймер
+
+Тут находятся конспекты занятий, задания и другие материалы к лекциям AnDan UX Lub. Сайт сделан с помощью RMarkdown, все исходные `.RMD` файлы лежат на [гитхабе](https://github.com/AnufrievGrigoriy/stats). Спасибо Ивану Позднякову за пример использования git pages и советы при его создании.
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+=======
+--- 
+title: "Статистика, R и анализ данных"
+author: "Ануфриев Григорий"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+always_allow_html: yes
+description: "Конспекты занятий и задания"
+---
+
+# Дисклеймер
+
+Тут находятся конспекты занятий, задания и другие материалы к лекциям AnDan UX Lub. Сайт сделан с помощью RMarkdown, все исходные `.RMD` файлы лежат на [гитхабе](https://github.com/AnufrievGrigoriy/stats). Спасибо Ивану Позднякову за пример использования git pages и советы при его создании.
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+>>>>>>> 29681eed491c501ff47b3a7d8c716fc0e9ee5d6b

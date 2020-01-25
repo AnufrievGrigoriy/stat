@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Статистика & R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="0.1" data-path=""><a href="#topics"><i class="fa fa-check"></i><b>0.1</b> Темы занятий</a></li>
+<li class="chapter" data-level="0.2" data-path=""><a href="#chastot"><i class="fa fa-check"></i><b>0.2</b> Частотные данные</a><ul>
+<li class="chapter" data-level="0.2.1" data-path=""><a href="#описательные-статистики"><i class="fa fa-check"></i><b>0.2.1</b> Описательные статистики</a></li>
+<li class="chapter" data-level="0.2.2" data-path=""><a href="#variation"><i class="fa fa-check"></i><b>0.2.2</b> Показатели вариации</a></li>
+</ul></li>
+<li class="chapter" data-level="0.3" data-path=""><a href="#shcaly"><i class="fa fa-check"></i><b>0.3</b> Частотный анализ для разных шкал измерений</a><ul>
+<li class="chapter" data-level="0.3.1" data-path=""><a href="#неметрические-шкалы-наименований-и-ранговая."><i class="fa fa-check"></i><b>0.3.1</b> Неметрические шкалы: наименований и ранговая.</a></li>
+<li class="chapter" data-level="0.3.2" data-path=""><a href="#метрические-шкалы-интервальная-и-абсолютная."><i class="fa fa-check"></i><b>0.3.2</b> Метрические шкалы: интервальная и абсолютная.</a></li>
+</ul></li>
+<li class="chapter" data-level="0.4" data-path=""><a href="#table"><i class="fa fa-check"></i><b>0.4</b> Построение таблиц сопряженности.</a></li>
+<li class="chapter" data-level="0.5" data-path=""><a href="#hsqd"><i class="fa fa-check"></i><b>0.5</b> Математика хи-квадрата. Требования.</a></li>
+<li class="chapter" data-level="0.6" data-path=""><a href="#fisher"><i class="fa fa-check"></i><b>0.6</b> Точный критерий Фишера.</a></li>
+<li class="chapter" data-level="0.7" data-path=""><a href="#topics"><i class="fa fa-check"></i><b>0.7</b> Темы занятий</a></li>
+<li class="chapter" data-level="0.8" data-path=""><a href="#chastot"><i class="fa fa-check"></i><b>0.8</b> Частотные данные</a><ul>
+<li class="chapter" data-level="0.8.1" data-path=""><a href="#описательные-статистики-1"><i class="fa fa-check"></i><b>0.8.1</b> Описательные статистики</a></li>
+<li class="chapter" data-level="0.8.2" data-path=""><a href="#variation"><i class="fa fa-check"></i><b>0.8.2</b> Показатели вариации</a></li>
+</ul></li>
+<li class="chapter" data-level="0.9" data-path=""><a href="#shcaly"><i class="fa fa-check"></i><b>0.9</b> Частотный анализ для разных шкал измерений</a><ul>
+<li class="chapter" data-level="0.9.1" data-path=""><a href="#неметрические-шкалы-наименований-и-ранговая.-1"><i class="fa fa-check"></i><b>0.9.1</b> Неметрические шкалы: наименований и ранговая.</a></li>
+<li class="chapter" data-level="0.9.2" data-path=""><a href="#метрические-шкалы-интервальная-и-абсолютная.-1"><i class="fa fa-check"></i><b>0.9.2</b> Метрические шкалы: интервальная и абсолютная.</a></li>
+</ul></li>
+<li class="chapter" data-level="0.10" data-path=""><a href="#table"><i class="fa fa-check"></i><b>0.10</b> Построение таблиц сопряженности.</a></li>
+<li class="chapter" data-level="0.11" data-path=""><a href="#hsqd"><i class="fa fa-check"></i><b>0.11</b> Математика хи-квадрата. Требования.</a></li>
+<li class="chapter" data-level="0.12" data-path=""><a href="#fisher"><i class="fa fa-check"></i><b>0.12</b> Точный критерий Фишера.</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:title:end-->
+<!--bookdown:title:start-->
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD # Первая лекция {#intro}</p>
+<div id="topics" class="section level2">
+<h2><span class="header-section-number">0.1</span> Темы занятий</h2>
+<ol style="list-style-type: decimal">
+<li>Частотные таблицы. Таблицы сопряженности. Хи-квадрат и точный критерий Фишера. (Что такое частотные данные. Как строить таблицы сопряженности. Математика хи-квадрата. Требования. Точный критерий Фишера.)</li>
+<li>Проверка на нормальность и сравнение средних (Графические и аналитические методы. Вероятностная бумага. Критерии Шапиро–Уилка и Колмогорова–Смирнова. Параметрические и непараметрические критерии. t-тест, U-Манна-Уитни, Вилкоксон)</li>
+</ol>
+</div>
+<div id="chastot" class="section level2">
+<h2><span class="header-section-number">0.2</span> Частотные данные</h2>
+<p>Частотные данные часто используются для описательных статистик. Это позволяет получить представление о структуре анализируемых данных в целом.</p>
+<p>Примеры будем разбирать на встроенном датасете R - mtcars: датасет с 32 автомобилями по 11 признакам, два из которых (vs и am) являются номинальными переменными (факторами) c уровнями, закодированными в виде 0 и 1 (подробнее см. ‘?mtcars’). ‘mpg’ - топлевная экономичность (в милях на галон) запишем его в переменнную ‘df’.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span>mtcars</code></pre></div>
+<div id="описательные-статистики" class="section level3">
+<h3><span class="header-section-number">0.2.1</span> Описательные статистики</h3>
+<p>К описательным статистикам обычно относят характеристики центральной тенденции:</p>
+<blockquote>
+<p><strong>Медиана</strong> - уровень показателя, который делит набор данных на две равные половины.</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 19.2</code></pre>
+<blockquote>
+<p><strong>Арифметическое среднее</strong> - сумма чисел, разделённая на их количество.</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 20.09062</code></pre>
+<blockquote>
+<p><strong>Мода</strong> - значение во множестве наблюдений, которое встречается наиболее часто.</p>
+</blockquote>
+<p>Для моды стандартной команды в R не предусмотрено, можно использовать такую функцию:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Modes &lt;-<span class="st"> </span><span class="cf">function</span>(x) {
+  ux &lt;-<span class="st"> </span><span class="kw">unique</span>(x) <span class="co"># выделение уникальных значений в векторе</span>
+  tab &lt;-<span class="st"> </span><span class="kw">tabulate</span>(<span class="kw">match</span>(x, ux)) <span class="co"># подсчет сколько раз встречается значение</span>
+  ux[tab <span class="op">==</span><span class="st"> </span><span class="kw">max</span>(tab)]
+}
+
+<span class="kw">Modes</span>(df<span class="op">$</span>cyl)</code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<p>А также показатели вариации (изменчивости) данных:</p>
+<blockquote>
+<p><strong>Дисперсия</strong> случайной величины – это один из основных показателей в статистике. Он отражает меру разброса данных вокруг арифметической средней.</p>
+</blockquote>
+<p>КАРТИНКА ПОЯСНЯЮЩАЯ</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 36.3241</code></pre>
+<blockquote>
+<p><strong>Стандартное отклонение</strong> - оценка стандартного отклонения ее выборочного распределения, приближенно показывает, насколько значение статистики может отличаться от своего среднего значения (параметра генеральной совокупности).</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(df<span class="op">$</span>mpg) </code></pre></div>
+<pre><code>## [1] 6.026948</code></pre>
+<blockquote>
+<p><strong>Стандартная ошибка</strong> - (или просто стандартная ошибка) приближенно показывает, насколько ее выборочная средняя (случайная наблюдаемая величина) отличается от среднего генеральной совокупности.</p>
+</blockquote>
+<p>Специальной функции для расчета стандартной ошибки среднего в R нет, однако для этого вполне подойдут уже имеющиеся функции. Как известно, стандартная ошибка средней рассчитывается как отношение стандартного отклонения (sd) к квадратному корню из объема выборки:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(df<span class="op">$</span>mpg)<span class="op">/</span><span class="kw">sqrt</span>(<span class="kw">length</span>(df<span class="op">$</span>mpg)) <span class="co"># функция length() возвращает число элементов в векторе mpg</span></code></pre></div>
+<pre><code>## [1] 1.065424</code></pre>
+<p>Минимальное, максимальное значение и размах (оба значения).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">min</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 10.4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">max</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 33.9</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">range</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 10.4 33.9</code></pre>
+<p>Можно посмотреть многие эти характеристики (если они применимы к шкале) с помощью функции ‘summary()’</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(df)  </code></pre></div>
+<pre><code>##       mpg             cyl             disp             hp       
+##  Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  
+##  1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  
+##  Median :19.20   Median :6.000   Median :196.3   Median :123.0  
+##  Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  
+##  3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  
+##  Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  
+##       drat             wt             qsec             vs        
+##  Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  
+##  1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  
+##  Median :3.695   Median :3.325   Median :17.71   Median :0.0000  
+##  Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  
+##  3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  
+##  Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  
+##        am              gear            carb      
+##  Min.   :0.0000   Min.   :3.000   Min.   :1.000  
+##  1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  
+##  Median :0.0000   Median :4.000   Median :2.000  
+##  Mean   :0.4062   Mean   :3.688   Mean   :2.812  
+##  3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
+##  Max.   :1.0000   Max.   :5.000   Max.   :8.000</code></pre>
+<p>В статистике данные очень часто группируют в соответствии с тем или иным признаком, например, полом, социальным положением, стадией болезни, местом отбора проб и т.п. В R существует специальный класс векторов - факторы (factors), которые предназначены для хранения кодов соответствующих уровней номинальных признаков.Часто уровни факторов кодируют в виде чисел.</p>
+<p>Если что факторные переменные закодированы при помощи чисел 0 и 1, то для корреткной работы нужно их преобразовать в факторы.</p>
+<p>например переменная ‘df$vs’ указана как numeric.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(df<span class="op">$</span>vs) </code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p>Это может приводить к некоректной работе. Наример плот неправильно строит граф потому что неверно воспринимает тип переменной.</p>
+<p>plot(df$vs) ```</p>
+<p>Изменим тип переменной в факторы.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>vs &lt;-<span class="st"> </span><span class="kw">as.factor</span>(df<span class="op">$</span>vs) <span class="co"># теперь summary(df$vs) отображается корректно</span>
+<span class="kw">plot</span>(df<span class="op">$</span>vs)</code></pre></div>
+<p><img src="Chastoty_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>Или их можно переименовать сделав факторами в соответсвии с типом двигателя (V или S образный тип).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>vs &lt;-<span class="st"> </span><span class="kw">factor</span>(df<span class="op">$</span>vs, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;V&quot;</span>, <span class="st">&quot;S&quot;</span>)) </code></pre></div>
+<p>и по коробке передач (автоматическая или механическая).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>am &lt;-<span class="st"> </span><span class="kw">factor</span>(df<span class="op">$</span>am, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;auto&quot;</span>, <span class="st">&quot;manual&quot;</span>))
+<span class="kw">summary</span>(df<span class="op">$</span>am)</code></pre></div>
+<pre><code>##   auto manual 
+##     19     13</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(df<span class="op">$</span>am)</code></pre></div>
+<p><img src="Chastoty_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p>Также можно вставлять логические условия для обращения к некоторым элементам</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(df<span class="op">$</span>mpg[df<span class="op">$</span>cyl <span class="op">==</span><span class="st"> </span><span class="dv">6</span> <span class="op">&amp;</span><span class="st"> </span>df<span class="op">$</span>vs <span class="op">==</span><span class="st"> &quot;V&quot;</span>]) <span class="co"># те элементы у количество цилиндров = 6 и V-обтразный двигатель)</span></code></pre></div>
+<pre><code>## [1] 20.56667</code></pre>
+<p>‘NA’ в переменной будет мешать посчитать некоторые статистики (например среднее значение)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>mpg[<span class="dv">3</span>] &lt;-<span class="st"> </span><span class="ot">NA</span>
+<span class="kw">head</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 21.0 21.0   NA 21.4 18.7 18.1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<p>Можно пропускать отсутсвующие значения опцией na.rm (от not available и remove - удалить)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(df<span class="op">$</span>mpg, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) </code></pre></div>
+<pre><code>## [1] 20.00323</code></pre>
+<p>вернем значение на место</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>mpg[<span class="dv">3</span>] &lt;-<span class="st"> </span><span class="fl">22.8</span></code></pre></div>
+<p>Количество всех значений можно посчитать через</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">length</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 32</code></pre>
+<p>Количество неотсутствующих значений можно посчитать вот так:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="op">!</span><span class="kw">is.na</span>(df<span class="op">$</span>mpg)) <span class="co"># ! (логический оператор &quot;не&quot;), sum (cуммация), соответственно убрав ! можно посчитать количество пропущеных значений.</span></code></pre></div>
+<pre><code>## [1] 32</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">is.na</span>(df<span class="op">$</span>mpg)) <span class="co"># в этой переменной таких нет</span></code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<p>Выяснить порядковые номера элементов, обладающих минимальным и максимальным значениями.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">which.min</span>(df<span class="op">$</span>mpg) </code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">which.max</span>(df<span class="op">$</span>mpg) </code></pre></div>
+<pre><code>## [1] 20</code></pre>
+<p>Не бойтесь использовать функции при индексации и в других функциях:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rownames</span>(df)[<span class="kw">which.min</span>(df<span class="op">$</span>mpg)]</code></pre></div>
+<pre><code>## [1] &quot;Cadillac Fleetwood&quot;</code></pre>
+<p>Описательные статистики можно также выполнять функцией aggregate()</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">aggregate</span>(<span class="dt">x =</span> df<span class="op">$</span>mpg, <span class="dt">by =</span> <span class="kw">list</span>(df<span class="op">$</span>vs), <span class="dt">FUN =</span> mean) <span class="co"># лист группирующих переменных</span></code></pre></div>
+<pre><code>##   Group.1        x
+## 1       V 16.61667
+## 2       S 24.55714</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">aggregate</span>(hp <span class="op">~</span><span class="st"> </span>vs, df, mean) <span class="co"># упрощенная запись </span></code></pre></div>
+<pre><code>##   vs        hp
+## 1  V 189.72222
+## 2  S  91.35714</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">aggregate</span>(hp <span class="op">~</span><span class="st"> </span>vs <span class="op">+</span><span class="st"> </span>am, df, mean) <span class="co"># Можно разбивать по нескольким группам.</span></code></pre></div>
+<pre><code>##   vs     am        hp
+## 1  V   auto 194.16667
+## 2  S   auto 102.14286
+## 3  V manual 180.83333
+## 4  S manual  80.57143</code></pre>
+<p>А также функцией ‘tapply()’. Эта функция относится к “apply-семейству” R-функций. Эти функции позволяют выполнять математические вычисления над определенными элементами таблиц данных, матриц, или массивов (например, быстро вычислять среднее значение для каждого столбца или строки таблицы, и т.п.).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tapply</span>(<span class="dt">X =</span> df<span class="op">$</span>mpg, <span class="dt">INDEX =</span> df<span class="op">$</span>am, <span class="dt">FUN =</span> Modes) <span class="co"># считает моду топливной экономичности по факторам коробки передач </span></code></pre></div>
+<pre><code>## $auto
+## [1] 19.2 15.2 10.4
+## 
+## $manual
+## [1] 21.0 30.4</code></pre>
+<p>Подсчет среднего топливной экономичности по факторам коробки передач и типу двигателя.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tapply</span>(<span class="dt">X =</span> df<span class="op">$</span>mpg, <span class="dt">INDEX =</span> <span class="kw">list</span>(df<span class="op">$</span>am, df<span class="op">$</span>vs), <span class="dt">FUN =</span> mean)</code></pre></div>
+<pre><code>##            V        S
+## auto   15.05 20.74286
+## manual 19.75 28.37143</code></pre>
+<p>В параметр FUN можно вставлять пользовательские функции, например написаную вручную функцию для стандратных ошибок.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">SE &lt;-<span class="st"> </span><span class="cf">function</span>(x) {<span class="kw">sd</span>(x)<span class="op">/</span><span class="kw">sqrt</span>(<span class="kw">length</span>(x))}</code></pre></div>
+<p>Вставляем в FUN и все работает.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tapply</span>(<span class="dt">X =</span> df<span class="op">$</span>disp, <span class="dt">INDEX =</span> df<span class="op">$</span>am, <span class="dt">FUN =</span> SE)</code></pre></div>
+<pre><code>##     auto   manual 
+## 25.27511 24.18603</code></pre>
+</div>
+<div id="variation" class="section level3">
+<h3><span class="header-section-number">0.2.2</span> Показатели вариации</h3>
+<p>Показатели вариации дают очень важную характеристику процессам и явлениям. Они отражают устойчивость процессов и однородность явлений. Чем меньше показатель вариации, тем более процесс устойчивый, а значит, и более предсказуемый.</p>
+<p><strong>Квантили</strong> - общий термин для порогового значения не выше которого (то есть равно или ниже) которого лежит указанная часть данных. Медиана делит распределение попалам. Квартили делят распределение на четверти, квинтили - на 5 частей, децили - на 10 частей и процентили - на 100.</p>
+<p>Например, первый квартиль (Q1) делит распределение так, что 25 процентов наблюдений лежат не выше него; следовательно, 1-й квартиль также является 25-м процентилем. Второй квартиль (Q2) представляет 50-й процентиль, а третий квартиль (Q3) представляет 75-й процентиль, потому что 75 процентов наблюдений лежат не выше него.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">quantile</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>##     0%    25%    50%    75%   100% 
+## 10.400 15.425 19.200 22.800 33.900</code></pre>
+<p>При настройках, заданных по умолчанию, выполнение указанной команды приведет к расчету минимального (10.4) и максимального (33.9) значений, а также трех квартилей, т.е. значений, которые делят совокупность на четыре равные части - 15.4, 19.2 и 22.8. Межквартильный размах - это разница между 1-м и 3-м квартилями, т.е. между 25-м и 75-м процентилями. А разница между первым и третьим квартилями носит название интерквартильный размах (ИКР; англ. interquartile range).</p>
+<p>ИКР является робастным (выборосоустойчивый) аналогом дисперсии и может быть рассчитан в R при помощи функции IQR():</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">IQR</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 7.375</code></pre>
+<p>Функция ‘quantile()’ позволяет рассчитать и другие квантили. Например, децили (т.е. значения, делящие совокупность на десять частей) можно получить следующим образом:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">quantile</span>(df<span class="op">$</span>mpg, <span class="dt">p =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="fl">0.1</span>)) <span class="co"># задан вектор чисел от 0 до 1 с шагом в 0.1 = 10 квартилей</span></code></pre></div>
+<pre><code>##    0%   10%   20%   30%   40%   50%   60%   70%   80%   90%  100% 
+## 10.40 14.34 15.20 15.98 17.92 19.20 21.00 21.47 24.08 30.09 33.90</code></pre>
+<p><strong>Межквартильный размах</strong> - это разница между 1-м и 3-м квартилями, т.е. между 25-м и 75-м процентилями. Разница между первым и третьим квартилями носит название интерквартильный размах.</p>
+<p>Наглядное отображение размаха вариации и межквартильного расстояния производят с помощью диаграммы «ящик с усами».</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<p><img src="Chastoty_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p>Для подсчета кооффициента вариации и ассиметрии существует пакет moments (функции ‘kurtosis()’ и ‘skewness()’)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;moments&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(moments)</code></pre></div>
+<pre><code>## Warning: package &#39;moments&#39; was built under R version 3.5.2</code></pre>
+<p><strong>Коэффициент вариации</strong> или эксцесс (Kurtosis) - (среднеквадратическое отклонение деленное на среднее и умноженное на 100%). Этот показатель, который отражает остроту вершины и толщину хвостов одномерного распределения. Коэффициент вариации близок к 3 если наблюдения подчиняются нормальному распределению. Если коэффициент вариации значительно отличается от 3, то гипотезу о том, что данные взяты из нормально распределенной генеральной совокупности, следует отвергнуть. (НАСКОЛЬКО БОЛЬШЕ?)</p>
+<blockquote>
+<p>(Синяя кривая – нормальное распределение (куртозис нормального распределения вне зависимости от математического ожидания и стандартного отклонения равен 3). Красная кривая – имеет положительный эксцесс/куртозис больше 3.)</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">42</span>) <span class="co"># устанавливает seed (семечко) чтобы последующий псевдослучайный процесс можно было вопроизвести </span>
+<span class="kw">kurtosis</span>(<span class="kw">rnorm</span>(<span class="dv">1000</span>))</code></pre></div>
+<pre><code>## [1] 3.134824</code></pre>
+<p><strong>Коэффициент асимметрии</strong> - величина, характеризующая асимметрию распределения данной случайной величины. Положителен если правый хвост распределения длиннее левого. (ДОБАВИТЬ ФОТО С НАГЛЯДНОСТЬЮ)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">skewness</span>(df<span class="op">$</span>mpg, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)<span class="co"># считая пропущенные значения</span></code></pre></div>
+<pre><code>## [1] 0.6404399</code></pre>
+</div>
+</div>
+<div id="shcaly" class="section level2">
+<h2><span class="header-section-number">0.3</span> Частотный анализ для разных шкал измерений</h2>
+<p>Если вчера было 2 градусов по Цельсию а сегодня 4 градуса, значит ли это что сегодня в два раза теплее? (Ответ станет понятен в процессе.)</p>
+<div id="неметрические-шкалы-наименований-и-ранговая." class="section level3">
+<h3><span class="header-section-number">0.3.1</span> Неметрические шкалы: наименований и ранговая.</h3>
+<p>Доступны непараметрические методы статистики. В шкале наименований (номенальной) числа используются лишь как метки, для различения обьектов. Примеры: тип двигателя (V образный и S образный), пол, расса. Допустимые операции: проверка совпадания несовпадения (тождественность)(a==b,a!=b). Возможные описательные статистики: частота, мода.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>vs[<span class="dv">1</span>] <span class="op">==</span><span class="st"> </span>df<span class="op">$</span>vs[<span class="dv">2</span>] <span class="co"># обе машины имеют V образный двиатель </span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>vs[<span class="dv">1</span>] <span class="op">==</span><span class="st"> </span>df<span class="op">$</span>vs[<span class="dv">3</span>] <span class="co"># а эти имеют разные типы двигателей</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<p>В порядковой шкале (или ранговой) объекты ранжированы, расположены в порядке увеличения или уменьшения значения параметра. Примеры: бальные оценки успеваемости (неудовлетворительно, удовлетворительно, хорошо, отлично). Допустимые операции: проверка тождественности (a==b,a!=b), сравнения (a&gt;b, a&lt;b). Упорядочим машины по параметру “Приятность названия машины Григорию” (где 1 самая приятная)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>like &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">16</span>,<span class="dv">15</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">13</span>,<span class="dv">12</span>,<span class="dv">27</span>,<span class="dv">27</span>,<span class="dv">27</span>,<span class="dv">27</span>,<span class="dv">27</span>,<span class="dv">27</span>,<span class="dv">14</span>,<span class="dv">17</span>,<span class="dv">3</span>,<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">18</span>,<span class="dv">9</span>,<span class="dv">25</span>,<span class="dv">24</span>,<span class="dv">7</span>,<span class="dv">23</span>,<span class="dv">22</span>,<span class="dv">26</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">9</span>,<span class="dv">8</span>,<span class="dv">19</span>,<span class="dv">20</span>,<span class="dv">21</span>)</code></pre></div>
+<p>Одинаково ли Григорию нравятся название машин “Merc 240D” и Merc 230?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df[<span class="st">&quot;Merc 230&quot;</span>, <span class="st">&quot;like&quot;</span>] <span class="op">==</span><span class="st"> </span>df[<span class="st">&quot;Merc 240D&quot;</span>, <span class="st">&quot;like&quot;</span>] <span class="co"># да, одинаково</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>А какое название приятнее “Porsche 914-2” или “Chrysler Imperial”?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df[<span class="st">&quot;Porsche 914-2&quot;</span>, <span class="st">&quot;like&quot;</span>] <span class="op">&lt;</span><span class="st"> </span>df[<span class="st">&quot;Chrysler Imperial&quot;</span>, <span class="st">&quot;like&quot;</span>] <span class="co"># &quot;Porsche 914-2&quot; имеет более высокий ранг.</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>Возможные описательные статистики: мода, медиана. Допустимые статистики: ранговые коэффициенты корреляции (r-Спирмана, r-Кендалла)</p>
+</div>
+<div id="метрические-шкалы-интервальная-и-абсолютная." class="section level3">
+<h3><span class="header-section-number">0.3.2</span> Метрические шкалы: интервальная и абсолютная.</h3>
+<p>Доступные параметрические методы статистики. В шкале интервалов существенной характеристикой является разность меджу значеними оцениваемых параметров выраженная в единицах этой шкалы. Начало отсчета может быть установлено произвольно.</p>
+<p>Примеры: шкала Цельсия. Интервал между замерзанием и кипением воды разделен на 100 равных частей названых градусами.</p>
+<p>Допустимые операции: проверка тождественности <code>(a==b,a!=b)</code>, сравнения <code>(a&gt;b, a&lt;b)</code>, сложения/вычетания <code>(a+b, a-b)</code>.</p>
+<p>Ответ на вопрос в начале: Так как действия умножения и деления недоступны для интервальной шкалы, то неправомерно говорить во сколько раз одна температура больше другой.</p>
+<p>Возможные описательные статистики: мода, медиана, среднее арефметическое, стандартное отклонение.</p>
+<p>Допустимые статистики: критерий согласия Пирсона, R — множественный коэффициент корреляции, все известные операции с натуральными числами.</p>
+<p>Шкала отношений (абсолютная шкала) - это шкала интервалов у которой определено нулевой элемент - начало отсчета, а также размер едениц измерения.</p>
+<p>Примеры: длинна, стоимость, возраст.</p>
+<p>Допустимые операции: проверка тождественности <code>(a==b,a!=b)</code>, сравнения <code>(a&gt;b, a&lt;b)</code>, сложения/вычетания <code>(a+b, a-b)</code>, умножения и деления <code>(a*b, a/b)</code>.</p>
+<p>Возможные описательные статистики: мода, медиана, среднее арефметическое, дисперсия, стандартное отклонение, коэффициент вариации, геометрическое среднее (перемножаем числа и делим на их колличество).</p>
+<p>Допустимые статистики: критерий согласия Пирсона, R — множественный коэффициент корреляции, все известные операции с натуральными числами.</p>
+<p>Как правило, для переменных, относящихся к метрической (интервальной) шкале и подчиняющихся нормальному распределению, в качестве основной характеристики используют среднее значение, а в качестве меры разброса – стандартное отклонение или стандартную ошибку. Для порядковых или интервальных переменных, не подчиняющихся нормальному распределению, соответственно медиану или первый и третий квартили. Для переменных, относящихся к номинальной шкале, нельзя дать других значимых характеристиккроме моды.</p>
+</div>
+</div>
+<div id="table" class="section level2">
+<h2><span class="header-section-number">0.4</span> Построение таблиц сопряженности.</h2>
+</div>
+<div id="hsqd" class="section level2">
+<h2><span class="header-section-number">0.5</span> Математика хи-квадрата. Требования.</h2>
+</div>
+<div id="fisher" class="section level2">
+<h2><span class="header-section-number">0.6</span> Точный критерий Фишера.</h2>
+<p>======= # Первая лекция {#intro}</p>
+</div>
+<div id="topics" class="section level2">
+<h2><span class="header-section-number">0.7</span> Темы занятий</h2>
+<ol style="list-style-type: decimal">
+<li>Частотные таблицы. Таблицы сопряженности. Хи-квадрат и точный критерий Фишера. (Что такое частотные данные. Как строить таблицы сопряженности. Математика хи-квадрата. Требования. Точный критерий Фишера.)</li>
+<li>Проверка на нормальность и сравнение средних (Графические и аналитические методы. Вероятностная бумага. Критерии Шапиро–Уилка и Колмогорова–Смирнова. Параметрические и непараметрические критерии. t-тест, U-Манна-Уитни, Вилкоксон)</li>
+</ol>
+</div>
+<div id="chastot" class="section level2">
+<h2><span class="header-section-number">0.8</span> Частотные данные</h2>
+<p>Частотные данные часто используются для описательных статистик. Это позволяет получить представление о структуре анализируемых данных в целом.</p>
+<p>Примеры будем разбирать на встроенном датасете R - mtcars: датасет с 32 автомобилями по 11 признакам, два из которых (vs и am) являются номинальными переменными (факторами) c уровнями, закодированными в виде 0 и 1 (подробнее см. ‘?mtcars’). ‘mpg’ - топлевная экономичность (в милях на галон) запишем его в переменнную ‘df’.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span>mtcars</code></pre></div>
+<div id="описательные-статистики-1" class="section level3">
+<h3><span class="header-section-number">0.8.1</span> Описательные статистики</h3>
+<p>К описательным статистикам обычно относят характеристики центральной тенденции:</p>
+<blockquote>
+<p><strong>Медиана</strong> - уровень показателя, который делит набор данных на две равные половины.</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 19.2</code></pre>
+<blockquote>
+<p><strong>Арифметическое среднее</strong> - сумма чисел, разделённая на их количество.</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 20.09062</code></pre>
+<blockquote>
+<p><strong>Мода</strong> - значение во множестве наблюдений, которое встречается наиболее часто.</p>
+</blockquote>
+<p>Для моды стандартной команды в R не предусмотрено, можно использовать такую функцию:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Modes &lt;-<span class="st"> </span><span class="cf">function</span>(x) {
+  ux &lt;-<span class="st"> </span><span class="kw">unique</span>(x) <span class="co"># выделение уникальных значений в векторе</span>
+  tab &lt;-<span class="st"> </span><span class="kw">tabulate</span>(<span class="kw">match</span>(x, ux)) <span class="co"># подсчет сколько раз встречается значение</span>
+  ux[tab <span class="op">==</span><span class="st"> </span><span class="kw">max</span>(tab)]
+}
+
+<span class="kw">Modes</span>(df<span class="op">$</span>cyl)</code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<p>А также показатели вариации (изменчивости) данных:</p>
+<blockquote>
+<p><strong>Дисперсия</strong> случайной величины – это один из основных показателей в статистике. Он отражает меру разброса данных вокруг арифметической средней.</p>
+</blockquote>
+<p>КАРТИНКА ПОЯСНЯЮЩАЯ</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 36.3241</code></pre>
+<blockquote>
+<p><strong>Стандартное отклонение</strong> - оценка стандартного отклонения ее выборочного распределения, приближенно показывает, насколько значение статистики может отличаться от своего среднего значения (параметра генеральной совокупности).</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(df<span class="op">$</span>mpg) </code></pre></div>
+<pre><code>## [1] 6.026948</code></pre>
+<blockquote>
+<p><strong>Стандартная ошибка</strong> - (или просто стандартная ошибка) приближенно показывает, насколько ее выборочная средняя (случайная наблюдаемая величина) отличается от среднего генеральной совокупности.</p>
+</blockquote>
+<p>Специальной функции для расчета стандартной ошибки среднего в R нет, однако для этого вполне подойдут уже имеющиеся функции. Как известно, стандартная ошибка средней рассчитывается как отношение стандартного отклонения (sd) к квадратному корню из объема выборки:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(df<span class="op">$</span>mpg)<span class="op">/</span><span class="kw">sqrt</span>(<span class="kw">length</span>(df<span class="op">$</span>mpg)) <span class="co"># функция length() возвращает число элементов в векторе mpg</span></code></pre></div>
+<pre><code>## [1] 1.065424</code></pre>
+<p>Минимальное, максимальное значение и размах (оба значения).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">min</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 10.4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">max</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 33.9</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">range</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 10.4 33.9</code></pre>
+<p>Можно посмотреть многие эти характеристики (если они применимы к шкале) с помощью функции ‘summary()’</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(df)  </code></pre></div>
+<pre><code>##       mpg             cyl             disp             hp       
+##  Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  
+##  1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  
+##  Median :19.20   Median :6.000   Median :196.3   Median :123.0  
+##  Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  
+##  3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  
+##  Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  
+##       drat             wt             qsec             vs        
+##  Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  
+##  1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  
+##  Median :3.695   Median :3.325   Median :17.71   Median :0.0000  
+##  Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  
+##  3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  
+##  Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  
+##        am              gear            carb      
+##  Min.   :0.0000   Min.   :3.000   Min.   :1.000  
+##  1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  
+##  Median :0.0000   Median :4.000   Median :2.000  
+##  Mean   :0.4062   Mean   :3.688   Mean   :2.812  
+##  3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
+##  Max.   :1.0000   Max.   :5.000   Max.   :8.000</code></pre>
+<p>В статистике данные очень часто группируют в соответствии с тем или иным признаком, например, полом, социальным положением, стадией болезни, местом отбора проб и т.п. В R существует специальный класс векторов - факторы (factors), которые предназначены для хранения кодов соответствующих уровней номинальных признаков.Часто уровни факторов кодируют в виде чисел.</p>
+<p>Если что факторные переменные закодированы при помощи чисел 0 и 1, то для корреткной работы нужно их преобразовать в факторы.</p>
+<p>например переменная ‘df$vs’ указана как numeric.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(df<span class="op">$</span>vs) </code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p>Это может приводить к некоректной работе. Наример плот неправильно строит граф потому что неверно воспринимает тип переменной.</p>
+<p>plot(df$vs) ```</p>
+<p>Изменим тип переменной в факторы.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>vs &lt;-<span class="st"> </span><span class="kw">as.factor</span>(df<span class="op">$</span>vs) <span class="co"># теперь summary(df$vs) отображается корректно</span>
+<span class="kw">plot</span>(df<span class="op">$</span>vs)</code></pre></div>
+<p><img src="Chastoty_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+<p>Или их можно переименовать сделав факторами в соответсвии с типом двигателя (V или S образный тип).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>vs &lt;-<span class="st"> </span><span class="kw">factor</span>(df<span class="op">$</span>vs, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;V&quot;</span>, <span class="st">&quot;S&quot;</span>)) </code></pre></div>
+<p>и по коробке передач (автоматическая или механическая).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>am &lt;-<span class="st"> </span><span class="kw">factor</span>(df<span class="op">$</span>am, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;auto&quot;</span>, <span class="st">&quot;manual&quot;</span>))
+<span class="kw">summary</span>(df<span class="op">$</span>am)</code></pre></div>
+<pre><code>##   auto manual 
+##     19     13</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(df<span class="op">$</span>am)</code></pre></div>
+<p><img src="Chastoty_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+<p>Также можно вставлять логические условия для обращения к некоторым элементам</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(df<span class="op">$</span>mpg[df<span class="op">$</span>cyl <span class="op">==</span><span class="st"> </span><span class="dv">6</span> <span class="op">&amp;</span><span class="st"> </span>df<span class="op">$</span>vs <span class="op">==</span><span class="st"> &quot;V&quot;</span>]) <span class="co"># те элементы у количество цилиндров = 6 и V-обтразный двигатель)</span></code></pre></div>
+<pre><code>## [1] 20.56667</code></pre>
+<p>‘NA’ в переменной будет мешать посчитать некоторые статистики (например среднее значение)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>mpg[<span class="dv">3</span>] &lt;-<span class="st"> </span><span class="ot">NA</span>
+<span class="kw">head</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 21.0 21.0   NA 21.4 18.7 18.1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<p>Можно пропускать отсутсвующие значения опцией na.rm (от not available и remove - удалить)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(df<span class="op">$</span>mpg, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>) </code></pre></div>
+<pre><code>## [1] 20.00323</code></pre>
+<p>вернем значение на место</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>mpg[<span class="dv">3</span>] &lt;-<span class="st"> </span><span class="fl">22.8</span></code></pre></div>
+<p>Количество всех значений можно посчитать через</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">length</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 32</code></pre>
+<p>Количество неотсутствующих значений можно посчитать вот так:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="op">!</span><span class="kw">is.na</span>(df<span class="op">$</span>mpg)) <span class="co"># ! (логический оператор &quot;не&quot;), sum (cуммация), соответственно убрав ! можно посчитать количество пропущеных значений.</span></code></pre></div>
+<pre><code>## [1] 32</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(<span class="kw">is.na</span>(df<span class="op">$</span>mpg)) <span class="co"># в этой переменной таких нет</span></code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<p>Выяснить порядковые номера элементов, обладающих минимальным и максимальным значениями.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">which.min</span>(df<span class="op">$</span>mpg) </code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">which.max</span>(df<span class="op">$</span>mpg) </code></pre></div>
+<pre><code>## [1] 20</code></pre>
+<p>Не бойтесь использовать функции при индексации и в других функциях:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rownames</span>(df)[<span class="kw">which.min</span>(df<span class="op">$</span>mpg)]</code></pre></div>
+<pre><code>## [1] &quot;Cadillac Fleetwood&quot;</code></pre>
+<p>Описательные статистики можно также выполнять функцией aggregate()</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">aggregate</span>(<span class="dt">x =</span> df<span class="op">$</span>mpg, <span class="dt">by =</span> <span class="kw">list</span>(df<span class="op">$</span>vs), <span class="dt">FUN =</span> mean) <span class="co"># лист группирующих переменных</span></code></pre></div>
+<pre><code>##   Group.1        x
+## 1       V 16.61667
+## 2       S 24.55714</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">aggregate</span>(hp <span class="op">~</span><span class="st"> </span>vs, df, mean) <span class="co"># упрощенная запись </span></code></pre></div>
+<pre><code>##   vs        hp
+## 1  V 189.72222
+## 2  S  91.35714</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">aggregate</span>(hp <span class="op">~</span><span class="st"> </span>vs <span class="op">+</span><span class="st"> </span>am, df, mean) <span class="co"># Можно разбивать по нескольким группам.</span></code></pre></div>
+<pre><code>##   vs     am        hp
+## 1  V   auto 194.16667
+## 2  S   auto 102.14286
+## 3  V manual 180.83333
+## 4  S manual  80.57143</code></pre>
+<p>А также функцией ‘tapply()’. Эта функция относится к “apply-семейству” R-функций. Эти функции позволяют выполнять математические вычисления над определенными элементами таблиц данных, матриц, или массивов (например, быстро вычислять среднее значение для каждого столбца или строки таблицы, и т.п.).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tapply</span>(<span class="dt">X =</span> df<span class="op">$</span>mpg, <span class="dt">INDEX =</span> df<span class="op">$</span>am, <span class="dt">FUN =</span> Modes) <span class="co"># считает моду топливной экономичности по факторам коробки передач </span></code></pre></div>
+<pre><code>## $auto
+## [1] 19.2 15.2 10.4
+## 
+## $manual
+## [1] 21.0 30.4</code></pre>
+<p>Подсчет среднего топливной экономичности по факторам коробки передач и типу двигателя.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tapply</span>(<span class="dt">X =</span> df<span class="op">$</span>mpg, <span class="dt">INDEX =</span> <span class="kw">list</span>(df<span class="op">$</span>am, df<span class="op">$</span>vs), <span class="dt">FUN =</span> mean)</code></pre></div>
+<pre><code>##            V        S
+## auto   15.05 20.74286
+## manual 19.75 28.37143</code></pre>
+<p>В параметр FUN можно вставлять пользовательские функции, например написаную вручную функцию для стандратных ошибок.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">SE &lt;-<span class="st"> </span><span class="cf">function</span>(x) {<span class="kw">sd</span>(x)<span class="op">/</span><span class="kw">sqrt</span>(<span class="kw">length</span>(x))}</code></pre></div>
+<p>Вставляем в FUN и все работает.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tapply</span>(<span class="dt">X =</span> df<span class="op">$</span>disp, <span class="dt">INDEX =</span> df<span class="op">$</span>am, <span class="dt">FUN =</span> SE)</code></pre></div>
+<pre><code>##     auto   manual 
+## 25.27511 24.18603</code></pre>
+</div>
+<div id="variation" class="section level3">
+<h3><span class="header-section-number">0.8.2</span> Показатели вариации</h3>
+<p>Показатели вариации дают очень важную характеристику процессам и явлениям. Они отражают устойчивость процессов и однородность явлений. Чем меньше показатель вариации, тем более процесс устойчивый, а значит, и более предсказуемый.</p>
+<p><strong>Квантили</strong> - общий термин для порогового значения не выше которого (то есть равно или ниже) которого лежит указанная часть данных. Медиана делит распределение попалам. Квартили делят распределение на четверти, квинтили - на 5 частей, децили - на 10 частей и процентили - на 100.</p>
+<p>Например, первый квартиль (Q1) делит распределение так, что 25 процентов наблюдений лежат не выше него; следовательно, 1-й квартиль также является 25-м процентилем. Второй квартиль (Q2) представляет 50-й процентиль, а третий квартиль (Q3) представляет 75-й процентиль, потому что 75 процентов наблюдений лежат не выше него.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">quantile</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>##     0%    25%    50%    75%   100% 
+## 10.400 15.425 19.200 22.800 33.900</code></pre>
+<p>При настройках, заданных по умолчанию, выполнение указанной команды приведет к расчету минимального (10.4) и максимального (33.9) значений, а также трех квартилей, т.е. значений, которые делят совокупность на четыре равные части - 15.4, 19.2 и 22.8. Межквартильный размах - это разница между 1-м и 3-м квартилями, т.е. между 25-м и 75-м процентилями. А разница между первым и третьим квартилями носит название интерквартильный размах (ИКР; англ. interquartile range).</p>
+<p>ИКР является робастным (выборосоустойчивый) аналогом дисперсии и может быть рассчитан в R при помощи функции IQR():</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">IQR</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<pre><code>## [1] 7.375</code></pre>
+<p>Функция ‘quantile()’ позволяет рассчитать и другие квантили. Например, децили (т.е. значения, делящие совокупность на десять частей) можно получить следующим образом:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">quantile</span>(df<span class="op">$</span>mpg, <span class="dt">p =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="fl">0.1</span>)) <span class="co"># задан вектор чисел от 0 до 1 с шагом в 0.1 = 10 квартилей</span></code></pre></div>
+<pre><code>##    0%   10%   20%   30%   40%   50%   60%   70%   80%   90%  100% 
+## 10.40 14.34 15.20 15.98 17.92 19.20 21.00 21.47 24.08 30.09 33.90</code></pre>
+<p><strong>Межквартильный размах</strong> - это разница между 1-м и 3-м квартилями, т.е. между 25-м и 75-м процентилями. Разница между первым и третьим квартилями носит название интерквартильный размах.</p>
+<p>Наглядное отображение размаха вариации и межквартильного расстояния производят с помощью диаграммы «ящик с усами».</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(df<span class="op">$</span>mpg)</code></pre></div>
+<p><img src="Chastoty_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
+<p>Для подсчета кооффициента вариации и ассиметрии существует пакет moments (функции ‘kurtosis()’ и ‘skewness()’)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;moments&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(moments)</code></pre></div>
+<p><strong>Коэффициент вариации</strong> или эксцесс (Kurtosis) - (среднеквадратическое отклонение деленное на среднее и умноженное на 100%). Этот показатель, который отражает остроту вершины и толщину хвостов одномерного распределения. Коэффициент вариации близок к 3 если наблюдения подчиняются нормальному распределению. Если коэффициент вариации значительно отличается от 3, то гипотезу о том, что данные взяты из нормально распределенной генеральной совокупности, следует отвергнуть. (НАСКОЛЬКО БОЛЬШЕ?)</p>
+<blockquote>
+<p>(Синяя кривая – нормальное распределение (куртозис нормального распределения вне зависимости от математического ожидания и стандартного отклонения равен 3). Красная кривая – имеет положительный эксцесс/куртозис больше 3.)</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">42</span>) <span class="co"># устанавливает seed (семечко) чтобы последующий псевдослучайный процесс можно было вопроизвести </span>
+<span class="kw">kurtosis</span>(<span class="kw">rnorm</span>(<span class="dv">1000</span>))</code></pre></div>
+<pre><code>## [1] 3.134824</code></pre>
+<p><strong>Коэффициент асимметрии</strong> - величина, характеризующая асимметрию распределения данной случайной величины. Положителен если правый хвост распределения длиннее левого. (ДОБАВИТЬ ФОТО С НАГЛЯДНОСТЬЮ)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">skewness</span>(df<span class="op">$</span>mpg, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)<span class="co"># считая пропущенные значения</span></code></pre></div>
+<pre><code>## [1] 0.6404399</code></pre>
+</div>
+</div>
+<div id="shcaly" class="section level2">
+<h2><span class="header-section-number">0.9</span> Частотный анализ для разных шкал измерений</h2>
+<p>Если вчера было 2 градусов по Цельсию а сегодня 4 градуса, значит ли это что сегодня в два раза теплее? (Ответ станет понятен в процессе.)</p>
+<div id="неметрические-шкалы-наименований-и-ранговая.-1" class="section level3">
+<h3><span class="header-section-number">0.9.1</span> Неметрические шкалы: наименований и ранговая.</h3>
+<p>Доступны непараметрические методы статистики. В шкале наименований (номенальной) числа используются лишь как метки, для различения обьектов. Примеры: тип двигателя (V образный и S образный), пол, расса. Допустимые операции: проверка совпадания несовпадения (тождественность)(a==b,a!=b). Возможные описательные статистики: частота, мода.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>vs[<span class="dv">1</span>] <span class="op">==</span><span class="st"> </span>df<span class="op">$</span>vs[<span class="dv">2</span>] <span class="co"># обе машины имеют V образный двиатель </span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>vs[<span class="dv">1</span>] <span class="op">==</span><span class="st"> </span>df<span class="op">$</span>vs[<span class="dv">3</span>] <span class="co"># а эти имеют разные типы двигателей</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<p>В порядковой шкале (или ранговой) объекты ранжированы, расположены в порядке увеличения или уменьшения значения параметра. Примеры: бальные оценки успеваемости (неудовлетворительно, удовлетворительно, хорошо, отлично). Допустимые операции: проверка тождественности (a==b,a!=b), сравнения (a&gt;b, a&lt;b). Упорядочим машины по параметру “Приятность названия машины Григорию” (где 1 самая приятная)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df<span class="op">$</span>like &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">16</span>,<span class="dv">15</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">13</span>,<span class="dv">12</span>,<span class="dv">27</span>,<span class="dv">27</span>,<span class="dv">27</span>,<span class="dv">27</span>,<span class="dv">27</span>,<span class="dv">27</span>,<span class="dv">14</span>,<span class="dv">17</span>,<span class="dv">3</span>,<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">18</span>,<span class="dv">9</span>,<span class="dv">25</span>,<span class="dv">24</span>,<span class="dv">7</span>,<span class="dv">23</span>,<span class="dv">22</span>,<span class="dv">26</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">9</span>,<span class="dv">8</span>,<span class="dv">19</span>,<span class="dv">20</span>,<span class="dv">21</span>)</code></pre></div>
+<p>Одинаково ли Григорию нравятся название машин “Merc 240D” и Merc 230?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df[<span class="st">&quot;Merc 230&quot;</span>, <span class="st">&quot;like&quot;</span>] <span class="op">==</span><span class="st"> </span>df[<span class="st">&quot;Merc 240D&quot;</span>, <span class="st">&quot;like&quot;</span>] <span class="co"># да, одинаково</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>А какое название приятнее “Porsche 914-2” или “Chrysler Imperial”?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df[<span class="st">&quot;Porsche 914-2&quot;</span>, <span class="st">&quot;like&quot;</span>] <span class="op">&lt;</span><span class="st"> </span>df[<span class="st">&quot;Chrysler Imperial&quot;</span>, <span class="st">&quot;like&quot;</span>] <span class="co"># &quot;Porsche 914-2&quot; имеет более высокий ранг.</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>Возможные описательные статистики: мода, медиана. Допустимые статистики: ранговые коэффициенты корреляции (r-Спирмана, r-Кендалла)</p>
+</div>
+<div id="метрические-шкалы-интервальная-и-абсолютная.-1" class="section level3">
+<h3><span class="header-section-number">0.9.2</span> Метрические шкалы: интервальная и абсолютная.</h3>
+<p>Доступные параметрические методы статистики. В шкале интервалов существенной характеристикой является разность меджу значеними оцениваемых параметров выраженная в единицах этой шкалы. Начало отсчета может быть установлено произвольно.</p>
+<p>Примеры: шкала Цельсия. Интервал между замерзанием и кипением воды разделен на 100 равных частей названых градусами.</p>
+<p>Допустимые операции: проверка тождественности <code>(a==b,a!=b)</code>, сравнения <code>(a&gt;b, a&lt;b)</code>, сложения/вычетания <code>(a+b, a-b)</code>.</p>
+<p>Ответ на вопрос в начале: Так как действия умножения и деления недоступны для интервальной шкалы, то неправомерно говорить во сколько раз одна температура больше другой.</p>
+<p>Возможные описательные статистики: мода, медиана, среднее арефметическое, стандартное отклонение.</p>
+<p>Допустимые статистики: критерий согласия Пирсона, R — множественный коэффициент корреляции, все известные операции с натуральными числами.</p>
+<p>Шкала отношений (абсолютная шкала) - это шкала интервалов у которой определено нулевой элемент - начало отсчета, а также размер едениц измерения.</p>
+<p>Примеры: длинна, стоимость, возраст.</p>
+<p>Допустимые операции: проверка тождественности <code>(a==b,a!=b)</code>, сравнения <code>(a&gt;b, a&lt;b)</code>, сложения/вычетания <code>(a+b, a-b)</code>, умножения и деления <code>(a*b, a/b)</code>.</p>
+<p>Возможные описательные статистики: мода, медиана, среднее арефметическое, дисперсия, стандартное отклонение, коэффициент вариации, геометрическое среднее (перемножаем числа и делим на их колличество).</p>
+<p>Допустимые статистики: критерий согласия Пирсона, R — множественный коэффициент корреляции, все известные операции с натуральными числами.</p>
+<p>Как правило, для переменных, относящихся к метрической (интервальной) шкале и подчиняющихся нормальному распределению, в качестве основной характеристики используют среднее значение, а в качестве меры разброса – стандартное отклонение или стандартную ошибку. Для порядковых или интервальных переменных, не подчиняющихся нормальному распределению, соответственно медиану или первый и третий квартили. Для переменных, относящихся к номинальной шкале, нельзя дать других значимых характеристиккроме моды.</p>
+</div>
+</div>
+<div id="table" class="section level2">
+<h2><span class="header-section-number">0.10</span> Построение таблиц сопряженности.</h2>
+</div>
+<div id="hsqd" class="section level2">
+<h2><span class="header-section-number">0.11</span> Математика хи-квадрата. Требования.</h2>
+</div>
+<div id="fisher" class="section level2">
+<h2><span class="header-section-number">0.12</span> Точный критерий Фишера.</h2>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>29681eed491c501ff47b3a7d8c716fc0e9ee5d6b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": false
+});
+});
+</script>
+
+</body>
+
+</html>
