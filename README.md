@@ -3,4 +3,4 @@ https://AnufrievGrigoriy.github.io/stats/# stats
 <<<<<<< HEAD
 
 =======
->>>>>>> частоты
+>>>>>>> частоты и таблицы сопряженности
