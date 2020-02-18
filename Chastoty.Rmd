@@ -454,7 +454,6 @@ str(gip)
 
 1. Выполнить 5.12 "Описательная статистика"
 https://pozdniakov.github.io/stats/tasks.html#task_desc
-
 2. Понять как работает table (посмотрите хелп)
 
 
