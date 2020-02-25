@@ -15,6 +15,7 @@ description: "Конспекты занятий и задания"
 #Дисклеймер
 
 Тут находятся конспекты занятий, задания и другие материалы к лекциям AnDan под эгидой UX Lab. Сайт сделан с помощью RMarkdown, все исходные `.RMD` файлы лежат на [гитхабе](https://github.com/AnufrievGrigoriy/stat). 
+Множество материалов в лекции вдохновлено и просто взято из различных источников, например этого чудестного курса по R: https://stepik.org/course/129/syllabus
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Первая лекция | Статистика, R и анализ данных</title>
+  <title>2 Частотные данные и таблицы сопряженности | Статистика, R и анализ данных</title>
   <meta name="description" content="Конспекты занятий и задания" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Первая лекция | Статистика, R и анализ данных" />
+  <meta property="og:title" content="2 Частотные данные и таблицы сопряженности | Статистика, R и анализ данных" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Первая лекция | Статистика, R и анализ данных" />
+  <meta name="twitter:title" content="2 Частотные данные и таблицы сопряженности | Статистика, R и анализ данных" />
   
   <meta name="twitter:description" content="Конспекты занятий и задания" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Ануфриев Григорий" />
 
 
-<meta name="date" content="2020-02-18" />
+<meta name="date" content="2020-02-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="index.html"/>
-
+<link rel="next" href="kriterii.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -107,17 +107,59 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Дисклеймер</a></li>
-<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Первая лекция</a><ul>
-<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#topics"><i class="fa fa-check"></i><b>2.1</b> Темы занятий</a></li>
-<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#chastot"><i class="fa fa-check"></i><b>2.2</b> Частотные данные</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="intro.html"><a href="intro.html#описательные-статистики"><i class="fa fa-check"></i><b>2.2.1</b> Описательные статистики</a></li>
-<li class="chapter" data-level="2.2.2" data-path="intro.html"><a href="intro.html#variation"><i class="fa fa-check"></i><b>2.2.2</b> Показатели вариации</a></li>
+<li class="chapter" data-level="2" data-path="chastoty.html"><a href="chastoty.html"><i class="fa fa-check"></i><b>2</b> Частотные данные и таблицы сопряженности</a><ul>
+<li class="chapter" data-level="2.1" data-path="chastoty.html"><a href="chastoty.html#topics"><i class="fa fa-check"></i><b>2.1</b> Темы занятия</a></li>
+<li class="chapter" data-level="2.2" data-path="chastoty.html"><a href="chastoty.html#chastot"><i class="fa fa-check"></i><b>2.2</b> Частотные данные</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="chastoty.html"><a href="chastoty.html#описательные-статистики"><i class="fa fa-check"></i><b>2.2.1</b> Описательные статистики</a></li>
+<li class="chapter" data-level="2.2.2" data-path="chastoty.html"><a href="chastoty.html#variation"><i class="fa fa-check"></i><b>2.2.2</b> Показатели вариации</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#shcaly"><i class="fa fa-check"></i><b>2.3</b> Частотный анализ для разных шкал измерений</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="intro.html"><a href="intro.html#неметрические-шкалы-наименований-и-ранговая."><i class="fa fa-check"></i><b>2.3.1</b> Неметрические шкалы: наименований и ранговая.</a></li>
-<li class="chapter" data-level="2.3.2" data-path="intro.html"><a href="intro.html#метрические-шкалы-интервальная-и-абсолютная."><i class="fa fa-check"></i><b>2.3.2</b> Метрические шкалы: интервальная и абсолютная.</a></li>
+<li class="chapter" data-level="2.3" data-path="chastoty.html"><a href="chastoty.html#shcaly"><i class="fa fa-check"></i><b>2.3</b> Частотный анализ для разных шкал измерений</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="chastoty.html"><a href="chastoty.html#неметрические-шкалы-наименований-и-ранговая."><i class="fa fa-check"></i><b>2.3.1</b> Неметрические шкалы: наименований и ранговая.</a></li>
+<li class="chapter" data-level="2.3.2" data-path="chastoty.html"><a href="chastoty.html#метрические-шкалы-интервальная-и-абсолютная."><i class="fa fa-check"></i><b>2.3.2</b> Метрические шкалы: интервальная и абсолютная.</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#table"><i class="fa fa-check"></i><b>2.4</b> Построение таблиц сопряженности.</a></li>
+<li class="chapter" data-level="2.4" data-path="chastoty.html"><a href="chastoty.html#table"><i class="fa fa-check"></i><b>2.4</b> Построение таблиц сопряженности.</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="kriterii.html"><a href="kriterii.html"><i class="fa fa-check"></i><b>3</b> Критерии</a><ul>
+<li class="chapter" data-level="3.1" data-path="kriterii.html"><a href="kriterii.html#темы-занятия"><i class="fa fa-check"></i><b>3.1</b> Темы занятия</a></li>
+<li class="chapter" data-level="3.2" data-path="kriterii.html"><a href="kriterii.html#хи-квадрат"><i class="fa fa-check"></i><b>3.2</b> Хи квадрат</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="kriterii.html"><a href="kriterii.html#требования"><i class="fa fa-check"></i><b>3.2.1</b> Требования</a></li>
+<li class="chapter" data-level="3.2.2" data-path="kriterii.html"><a href="kriterii.html#ограничения"><i class="fa fa-check"></i><b>3.2.2</b> Ограничения</a></li>
+<li class="chapter" data-level="3.2.3" data-path="kriterii.html"><a href="kriterii.html#пример-использования"><i class="fa fa-check"></i><b>3.2.3</b> Пример использования</a></li>
+<li class="chapter" data-level="3.2.4" data-path="kriterii.html"><a href="kriterii.html#интерпритация"><i class="fa fa-check"></i><b>3.2.4</b> Интерпритация</a></li>
+<li class="chapter" data-level="3.2.5" data-path="kriterii.html"><a href="kriterii.html#визуализация"><i class="fa fa-check"></i><b>3.2.5</b> Визуализация</a></li>
+<li class="chapter" data-level="3.2.6" data-path="kriterii.html"><a href="kriterii.html#задание"><i class="fa fa-check"></i><b>3.2.6</b> Задание:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="kriterii.html"><a href="kriterii.html#точный-тест-фишера"><i class="fa fa-check"></i><b>3.3</b> Точный тест Фишера</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="kriterii.html"><a href="kriterii.html#когда-применяют"><i class="fa fa-check"></i><b>3.3.1</b> Когда применяют?</a></li>
+<li class="chapter" data-level="3.3.2" data-path="kriterii.html"><a href="kriterii.html#требования-1"><i class="fa fa-check"></i><b>3.3.2</b> Требования</a></li>
+<li class="chapter" data-level="3.3.3" data-path="kriterii.html"><a href="kriterii.html#пример-использования-1"><i class="fa fa-check"></i><b>3.3.3</b> Пример использования</a></li>
+<li class="chapter" data-level="3.3.4" data-path="kriterii.html"><a href="kriterii.html#задание-1"><i class="fa fa-check"></i><b>3.3.4</b> Задание:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="kriterii.html"><a href="kriterii.html#проверка-на-нормальность"><i class="fa fa-check"></i><b>3.4</b> Проверка на нормальность</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="kriterii.html"><a href="kriterii.html#критерии-шапироуилка"><i class="fa fa-check"></i><b>3.4.1</b> Критерии Шапиро–Уилка</a></li>
+<li class="chapter" data-level="3.4.2" data-path="kriterii.html"><a href="kriterii.html#критерий-колмогоровасмирнова"><i class="fa fa-check"></i><b>3.4.2</b> Критерий Колмогорова–Смирнова</a></li>
+<li class="chapter" data-level="3.4.3" data-path="kriterii.html"><a href="kriterii.html#проверка-однородности-гомогенности-дисперсий."><i class="fa fa-check"></i><b>3.4.3</b> Проверка однородности (гомогенности) дисперсий.</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="kriterii.html"><a href="kriterii.html#критерий-стьюдента-t-test"><i class="fa fa-check"></i><b>3.5</b> Критерий Стьюдента (t-test)</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="kriterii.html"><a href="kriterii.html#метод-реализации"><i class="fa fa-check"></i><b>3.5.1</b> Метод реализации</a></li>
+<li class="chapter" data-level="3.5.2" data-path="kriterii.html"><a href="kriterii.html#требования-2"><i class="fa fa-check"></i><b>3.5.2</b> Требования</a></li>
+<li class="chapter" data-level="3.5.3" data-path="kriterii.html"><a href="kriterii.html#ограничения-1"><i class="fa fa-check"></i><b>3.5.3</b> Ограничения</a></li>
+<li class="chapter" data-level="3.5.4" data-path="kriterii.html"><a href="kriterii.html#пример-использования-2"><i class="fa fa-check"></i><b>3.5.4</b> Пример использования</a></li>
+<li class="chapter" data-level="3.5.5" data-path="kriterii.html"><a href="kriterii.html#интерпритация-1"><i class="fa fa-check"></i><b>3.5.5</b> Интерпритация:</a></li>
+<li class="chapter" data-level="3.5.6" data-path="kriterii.html"><a href="kriterii.html#дополнительные-параметры"><i class="fa fa-check"></i><b>3.5.6</b> Дополнительные параметры</a></li>
+<li class="chapter" data-level="3.5.7" data-path="kriterii.html"><a href="kriterii.html#задание-2"><i class="fa fa-check"></i><b>3.5.7</b> Задание:</a></li>
+<li class="chapter" data-level="3.5.8" data-path="kriterii.html"><a href="kriterii.html#визуализация."><i class="fa fa-check"></i><b>3.5.8</b> Визуализация.</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="kriterii.html"><a href="kriterii.html#критерий-u-манна-уитни-и-вилкоксона"><i class="fa fa-check"></i><b>3.6</b> Критерий U-Манна-Уитни и Вилкоксона</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="kriterii.html"><a href="kriterii.html#метод-реализации-1"><i class="fa fa-check"></i><b>3.6.1</b> Метод реализации</a></li>
+<li class="chapter" data-level="3.6.2" data-path="kriterii.html"><a href="kriterii.html#когда-используют"><i class="fa fa-check"></i><b>3.6.2</b> Когда используют?</a></li>
+<li class="chapter" data-level="3.6.3" data-path="kriterii.html"><a href="kriterii.html#ограничения-2"><i class="fa fa-check"></i><b>3.6.3</b> Ограничения</a></li>
+<li class="chapter" data-level="3.6.4" data-path="kriterii.html"><a href="kriterii.html#пример-использования-3"><i class="fa fa-check"></i><b>3.6.4</b> Пример использования</a></li>
+<li class="chapter" data-level="3.6.5" data-path="kriterii.html"><a href="kriterii.html#интерпритация-2"><i class="fa fa-check"></i><b>3.6.5</b> Интерпритация</a></li>
+<li class="chapter" data-level="3.6.6" data-path="kriterii.html"><a href="kriterii.html#визуализация-1"><i class="fa fa-check"></i><b>3.6.6</b> Визуализация</a></li>
+<li class="chapter" data-level="3.6.7" data-path="kriterii.html"><a href="kriterii.html#задание-3"><i class="fa fa-check"></i><b>3.6.7</b> Задание:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="kriterii.html"><a href="kriterii.html#выбор-критерия"><i class="fa fa-check"></i><b>3.7</b> Выбор критерия:</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -139,18 +181,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">2</span> Первая лекция</h1>
+<div id="chastoty" class="section level1">
+<h1><span class="header-section-number">2</span> Частотные данные и таблицы сопряженности</h1>
 <div class="figure">
 <img src="images/pyramid.png" />
 
 </div>
 <div id="topics" class="section level2">
-<h2><span class="header-section-number">2.1</span> Темы занятий</h2>
-<ol style="list-style-type: decimal">
-<li>Частотные таблицы. Таблицы сопряженности. (Что такое частотные данные. Как строить таблицы сопряженности.)</li>
-<li>Хи-квадрат и точный критерий Фишера. Проверка на нормальность и сравнение средних (Математика хи-квадрата. Требования. Точный критерий Фишера. Графические и аналитические методы. Вероятностная бумага. Критерии Шапиро–Уилка и Колмогорова–Смирнова. Параметрические и непараметрические критерии. t-тест, U-Манна-Уитни, Вилкоксон)</li>
-</ol>
+<h2><span class="header-section-number">2.1</span> Темы занятия</h2>
+<ul>
+<li>Частотные данные</li>
+<li>Описательные статистики</li>
+<li>Частотный анализ для разных шкал измерений</li>
+<li>Показатели вариации</li>
+<li>Таблицы сопряженности</li>
+</ul>
 </div>
 <div id="chastot" class="section level2">
 <h2><span class="header-section-number">2.2</span> Частотные данные</h2>
@@ -426,6 +471,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><em>Возможные описательные статистики:</em> мода, медиана, среднее арефметическое, дисперсия, стандартное отклонение, коэффициент вариации, геометрическое среднее (перемножаем числа и делим на их колличество).</p>
 <p><em>Допустимые статистики:</em> критерий согласия Пирсона, R — множественный коэффициент корреляции, все известные операции с натуральными числами.</p>
 <p>Как правило, для переменных, относящихся к метрической (интервальной) шкале и подчиняющихся нормальному распределению, в качестве основной характеристики используют среднее значение, а в качестве меры разброса – стандартное отклонение или стандартную ошибку. Для порядковых или интервальных переменных, не подчиняющихся нормальному распределению, соответственно медиану или первый и третий квартили. Для переменных, относящихся к номинальной шкале, нельзя дать других значимых характеристиккроме моды.</p>
+<p>Оффтоп: Матрица диаграмм рассеянья может пригодиться чтобы быстро взглянуть на данные.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pairs</span>(mtcars[<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>])</code></pre></div>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
 </div>
 </div>
 <div id="table" class="section level2">
@@ -469,7 +517,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 a &lt;-<span class="st"> </span><span class="kw">ftable</span>(Titanic, <span class="dt">row.vars =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># графическое изображение таблицы сопряженности</span>
 <span class="kw">plot</span>(Titanic, <span class="dt">main =</span> <span class="st">&quot;Survival on the Titanic&quot;</span>, <span class="dt">color =</span> <span class="ot">TRUE</span>) <span class="co"># mosaicplot </span></code></pre></div>
-<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
 <p>Опция <code>row.vars</code> позволяет указать номера переменных в наборе данных, которые следует объединить в один единый фактор, градации которого и будут индексировать строки таблицы сопряжённости. Опция <code>col.vars</code> проделывает то же самое, но для столбцов таблицы.</p>
 <p>Функцию <code>table()</code> можно использовать и для других целей. Например подсчёта частот. Также можно считать пропуски:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d &lt;-<span class="st"> </span><span class="kw">factor</span>(<span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>), <span class="dv">10</span>), <span class="dt">levels=</span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>,<span class="st">&quot;D&quot;</span>,<span class="st">&quot;E&quot;</span>))
@@ -485,17 +533,61 @@ a &lt;-<span class="st"> </span><span class="kw">ftable</span>(Titanic, <span cl
 </div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># таблицу сопряженности в дата фрейме</span>
 
-lable &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Курящие&quot;</span>,<span class="st">&quot;Не курящие&quot;</span>, <span class="st">&quot;Всего&quot;</span>)
-gipertonia_yes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">40</span>, <span class="dv">32</span>, <span class="dv">72</span>)
-gipertonia_no &lt;-<span class="st">  </span><span class="kw">c</span>(<span class="dv">30</span>, <span class="dv">48</span>, <span class="dv">78</span>)
-all &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">70</span>,<span class="dv">80</span>, <span class="dv">150</span>)
-gip &lt;-<span class="st"> </span><span class="kw">data.frame</span>(lable, gipertonia_yes, gipertonia_no, all)
-<span class="kw">str</span>(gip)</code></pre></div>
-<pre><code>## &#39;data.frame&#39;:    3 obs. of  4 variables:
-##  $ lable         : Factor w/ 3 levels &quot;Всего&quot;,&quot;Курящие&quot;,..: 2 3 1
-##  $ gipertonia_yes: num  40 32 72
-##  $ gipertonia_no : num  30 48 78
-##  $ all           : num  70 80 150</code></pre>
+gip &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">c</span>(<span class="dv">40</span>, <span class="dv">32</span>, <span class="dv">72</span>), <span class="kw">c</span>(<span class="dv">30</span>, <span class="dv">48</span>, <span class="dv">78</span>), <span class="kw">c</span>(<span class="dv">70</span>,<span class="dv">80</span>, <span class="dv">150</span>))
+<span class="kw">rownames</span>(gip) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Курящие&quot;</span>,<span class="st">&quot;Не курящие&quot;</span>, <span class="st">&quot;Всего&quot;</span>)
+<span class="kw">colnames</span>(gip) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;С гипертонией&quot;</span>,<span class="st">&quot;Без гипертонии&quot;</span>, <span class="st">&quot;Всего&quot;</span>)</code></pre></div>
+<p>Используем датасет который предложил Иван Иванчей в курсе по R <a href="https://stepik.org/course/129/syllabus" class="uri">https://stepik.org/course/129/syllabus</a></p>
+<p><code>npersons</code> - сколько человек в планируемом проекте <code>years_in_uni</code> сколько лет провел в университете руководитель проекта <code>oldest_age</code> - самый старый сортудник <code>field</code> - облать исследования <code>status</code> - поддержана ли заявка</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://stepic.org/media/attachments/lesson/11502/grants.csv&quot;</span>)
+df<span class="op">$</span>status &lt;-<span class="st"> </span><span class="kw">factor</span>(df<span class="op">$</span>status, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;Не поддержан&quot;</span>,<span class="st">&quot;Поддержан&quot;</span>)) 
+df &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://stepic.org/media/attachments/lesson/11502/grants.csv&quot;</span>)
+df<span class="op">$</span>status &lt;-<span class="st"> </span><span class="kw">factor</span>(df<span class="op">$</span>status, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;Не поддержан&quot;</span>,<span class="st">&quot;Поддержан&quot;</span>)) 
+table.status &lt;-<span class="st"> </span><span class="kw">table</span>(df<span class="op">$</span>status) 
+table.field &lt;-<span class="st"> </span><span class="kw">table</span>(df<span class="op">$</span>status, df<span class="op">$</span>field) 
+<span class="kw">dim</span>(table.status) <span class="co"># посмотреть размерность таблицы</span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(table.field)</code></pre></div>
+<pre><code>## [1] 2 5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prop.table</span>(table.field) <span class="co"># пропорции или процены от общего числа</span></code></pre></div>
+<pre><code>##               
+##                   beh_cog        bio       chem    physics        soc
+##   Не поддержан 0.07042254 0.33309859 0.04225352 0.04929577 0.03098592
+##   Поддержан    0.04577465 0.30422535 0.04647887 0.05492958 0.02253521</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prop.table</span>(table.field, <span class="dv">1</span>) <span class="co"># 100% - сумма по строке</span></code></pre></div>
+<pre><code>##               
+##                   beh_cog        bio       chem    physics        soc
+##   Не поддержан 0.13386881 0.63319946 0.08032129 0.09370817 0.05890228
+##   Поддержан    0.09658247 0.64190193 0.09806835 0.11589896 0.04754829</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prop.table</span>(table.field, <span class="dv">2</span>) <span class="co"># 100% - сумма по столбцу</span></code></pre></div>
+<pre><code>##               
+##                  beh_cog       bio      chem   physics       soc
+##   Не поддержан 0.6060606 0.5226519 0.4761905 0.4729730 0.5789474
+##   Поддержан    0.3939394 0.4773481 0.5238095 0.5270270 0.4210526</code></pre>
+<p>Визуализация</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">barplot</span>(table.field, <span class="dt">legend.text =</span> <span class="ot">TRUE</span>, <span class="dt">args.legend =</span> <span class="kw">list</span>(<span class="dt">x =</span> <span class="st">&quot;topright&quot;</span>), <span class="dt">beside =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mosaicplot</span>(table.field)</code></pre></div>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+<p>3-х мерная таблица</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">table.years &lt;-<span class="st"> </span><span class="kw">table</span>(<span class="dt">Years =</span> df<span class="op">$</span>years_in_uni, <span class="dt">field =</span> df<span class="op">$</span>field, <span class="dt">status =</span> df<span class="op">$</span>status)
+<span class="kw">dim</span>(table.years)</code></pre></div>
+<pre><code>## [1] 3 5 2</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">table.years</code></pre></div>
+<pre><code>## , , status = Не поддержан
+## 
+##       field
+## Years  beh_cog bio chem physics soc
+##   &lt; 5       57 198   31      20  22
+##   &gt; 10      29 144   28      47  16
+##   5-10      14 131    1       3   6
+## 
+## , , status = Поддержан
+## 
+##       field
+## Years  beh_cog bio chem physics soc
+##   &lt; 5       27 180   41      22  14
+##   &gt; 10      30 155   19      54  15
+##   5-10       8  97    6       2   3</code></pre>
 <p>Домашнее задание:</p>
 <ol style="list-style-type: decimal">
 <li>Выполнить 5.12 “Описательная статистика” <a href="https://pozdniakov.github.io/stats/tasks.html#task_desc" class="uri">https://pozdniakov.github.io/stats/tasks.html#task_desc</a></li>
@@ -509,8 +601,8 @@ gip &lt;-<span class="st"> </span><span class="kw">data.frame</span>(lable, gipe
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="kriterii.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Критерии | Статистика, R и анализ данных</title>
+  <meta name="description" content="Конспекты занятий и задания" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Критерии | Статистика, R и анализ данных" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Конспекты занятий и задания" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Критерии | Статистика, R и анализ данных" />
+  
+  <meta name="twitter:description" content="Конспекты занятий и задания" />
+  
+
+<meta name="author" content="Ануфриев Григорий" />
+
+
+<meta name="date" content="2020-02-25" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="chastoty.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Статистика & R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Дисклеймер</a></li>
+<li class="chapter" data-level="2" data-path="chastoty.html"><a href="chastoty.html"><i class="fa fa-check"></i><b>2</b> Частотные данные и таблицы сопряженности</a><ul>
+<li class="chapter" data-level="2.1" data-path="chastoty.html"><a href="chastoty.html#topics"><i class="fa fa-check"></i><b>2.1</b> Темы занятия</a></li>
+<li class="chapter" data-level="2.2" data-path="chastoty.html"><a href="chastoty.html#chastot"><i class="fa fa-check"></i><b>2.2</b> Частотные данные</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="chastoty.html"><a href="chastoty.html#описательные-статистики"><i class="fa fa-check"></i><b>2.2.1</b> Описательные статистики</a></li>
+<li class="chapter" data-level="2.2.2" data-path="chastoty.html"><a href="chastoty.html#variation"><i class="fa fa-check"></i><b>2.2.2</b> Показатели вариации</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="chastoty.html"><a href="chastoty.html#shcaly"><i class="fa fa-check"></i><b>2.3</b> Частотный анализ для разных шкал измерений</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="chastoty.html"><a href="chastoty.html#неметрические-шкалы-наименований-и-ранговая."><i class="fa fa-check"></i><b>2.3.1</b> Неметрические шкалы: наименований и ранговая.</a></li>
+<li class="chapter" data-level="2.3.2" data-path="chastoty.html"><a href="chastoty.html#метрические-шкалы-интервальная-и-абсолютная."><i class="fa fa-check"></i><b>2.3.2</b> Метрические шкалы: интервальная и абсолютная.</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="chastoty.html"><a href="chastoty.html#table"><i class="fa fa-check"></i><b>2.4</b> Построение таблиц сопряженности.</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="kriterii.html"><a href="kriterii.html"><i class="fa fa-check"></i><b>3</b> Критерии</a><ul>
+<li class="chapter" data-level="3.1" data-path="kriterii.html"><a href="kriterii.html#темы-занятия"><i class="fa fa-check"></i><b>3.1</b> Темы занятия</a></li>
+<li class="chapter" data-level="3.2" data-path="kriterii.html"><a href="kriterii.html#хи-квадрат"><i class="fa fa-check"></i><b>3.2</b> Хи квадрат</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="kriterii.html"><a href="kriterii.html#требования"><i class="fa fa-check"></i><b>3.2.1</b> Требования</a></li>
+<li class="chapter" data-level="3.2.2" data-path="kriterii.html"><a href="kriterii.html#ограничения"><i class="fa fa-check"></i><b>3.2.2</b> Ограничения</a></li>
+<li class="chapter" data-level="3.2.3" data-path="kriterii.html"><a href="kriterii.html#пример-использования"><i class="fa fa-check"></i><b>3.2.3</b> Пример использования</a></li>
+<li class="chapter" data-level="3.2.4" data-path="kriterii.html"><a href="kriterii.html#интерпритация"><i class="fa fa-check"></i><b>3.2.4</b> Интерпритация</a></li>
+<li class="chapter" data-level="3.2.5" data-path="kriterii.html"><a href="kriterii.html#визуализация"><i class="fa fa-check"></i><b>3.2.5</b> Визуализация</a></li>
+<li class="chapter" data-level="3.2.6" data-path="kriterii.html"><a href="kriterii.html#задание"><i class="fa fa-check"></i><b>3.2.6</b> Задание:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="kriterii.html"><a href="kriterii.html#точный-тест-фишера"><i class="fa fa-check"></i><b>3.3</b> Точный тест Фишера</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="kriterii.html"><a href="kriterii.html#когда-применяют"><i class="fa fa-check"></i><b>3.3.1</b> Когда применяют?</a></li>
+<li class="chapter" data-level="3.3.2" data-path="kriterii.html"><a href="kriterii.html#требования-1"><i class="fa fa-check"></i><b>3.3.2</b> Требования</a></li>
+<li class="chapter" data-level="3.3.3" data-path="kriterii.html"><a href="kriterii.html#пример-использования-1"><i class="fa fa-check"></i><b>3.3.3</b> Пример использования</a></li>
+<li class="chapter" data-level="3.3.4" data-path="kriterii.html"><a href="kriterii.html#задание-1"><i class="fa fa-check"></i><b>3.3.4</b> Задание:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="kriterii.html"><a href="kriterii.html#проверка-на-нормальность"><i class="fa fa-check"></i><b>3.4</b> Проверка на нормальность</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="kriterii.html"><a href="kriterii.html#критерии-шапироуилка"><i class="fa fa-check"></i><b>3.4.1</b> Критерии Шапиро–Уилка</a></li>
+<li class="chapter" data-level="3.4.2" data-path="kriterii.html"><a href="kriterii.html#критерий-колмогоровасмирнова"><i class="fa fa-check"></i><b>3.4.2</b> Критерий Колмогорова–Смирнова</a></li>
+<li class="chapter" data-level="3.4.3" data-path="kriterii.html"><a href="kriterii.html#проверка-однородности-гомогенности-дисперсий."><i class="fa fa-check"></i><b>3.4.3</b> Проверка однородности (гомогенности) дисперсий.</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="kriterii.html"><a href="kriterii.html#критерий-стьюдента-t-test"><i class="fa fa-check"></i><b>3.5</b> Критерий Стьюдента (t-test)</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="kriterii.html"><a href="kriterii.html#метод-реализации"><i class="fa fa-check"></i><b>3.5.1</b> Метод реализации</a></li>
+<li class="chapter" data-level="3.5.2" data-path="kriterii.html"><a href="kriterii.html#требования-2"><i class="fa fa-check"></i><b>3.5.2</b> Требования</a></li>
+<li class="chapter" data-level="3.5.3" data-path="kriterii.html"><a href="kriterii.html#ограничения-1"><i class="fa fa-check"></i><b>3.5.3</b> Ограничения</a></li>
+<li class="chapter" data-level="3.5.4" data-path="kriterii.html"><a href="kriterii.html#пример-использования-2"><i class="fa fa-check"></i><b>3.5.4</b> Пример использования</a></li>
+<li class="chapter" data-level="3.5.5" data-path="kriterii.html"><a href="kriterii.html#интерпритация-1"><i class="fa fa-check"></i><b>3.5.5</b> Интерпритация:</a></li>
+<li class="chapter" data-level="3.5.6" data-path="kriterii.html"><a href="kriterii.html#дополнительные-параметры"><i class="fa fa-check"></i><b>3.5.6</b> Дополнительные параметры</a></li>
+<li class="chapter" data-level="3.5.7" data-path="kriterii.html"><a href="kriterii.html#задание-2"><i class="fa fa-check"></i><b>3.5.7</b> Задание:</a></li>
+<li class="chapter" data-level="3.5.8" data-path="kriterii.html"><a href="kriterii.html#визуализация."><i class="fa fa-check"></i><b>3.5.8</b> Визуализация.</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="kriterii.html"><a href="kriterii.html#критерий-u-манна-уитни-и-вилкоксона"><i class="fa fa-check"></i><b>3.6</b> Критерий U-Манна-Уитни и Вилкоксона</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="kriterii.html"><a href="kriterii.html#метод-реализации-1"><i class="fa fa-check"></i><b>3.6.1</b> Метод реализации</a></li>
+<li class="chapter" data-level="3.6.2" data-path="kriterii.html"><a href="kriterii.html#когда-используют"><i class="fa fa-check"></i><b>3.6.2</b> Когда используют?</a></li>
+<li class="chapter" data-level="3.6.3" data-path="kriterii.html"><a href="kriterii.html#ограничения-2"><i class="fa fa-check"></i><b>3.6.3</b> Ограничения</a></li>
+<li class="chapter" data-level="3.6.4" data-path="kriterii.html"><a href="kriterii.html#пример-использования-3"><i class="fa fa-check"></i><b>3.6.4</b> Пример использования</a></li>
+<li class="chapter" data-level="3.6.5" data-path="kriterii.html"><a href="kriterii.html#интерпритация-2"><i class="fa fa-check"></i><b>3.6.5</b> Интерпритация</a></li>
+<li class="chapter" data-level="3.6.6" data-path="kriterii.html"><a href="kriterii.html#визуализация-1"><i class="fa fa-check"></i><b>3.6.6</b> Визуализация</a></li>
+<li class="chapter" data-level="3.6.7" data-path="kriterii.html"><a href="kriterii.html#задание-3"><i class="fa fa-check"></i><b>3.6.7</b> Задание:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="kriterii.html"><a href="kriterii.html#выбор-критерия"><i class="fa fa-check"></i><b>3.7</b> Выбор критерия:</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Статистика, R и анализ данных</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="kriterii" class="section level1">
+<h1><span class="header-section-number">3</span> Критерии</h1>
+<p><img src="images/F.jpg" /> В память о погибшем коде.</p>
+<p><details><summary> <code>press F</code> </summary> <img src="images/PressF.jpg" /></p>
+<p>Делайте бекапы. Цените ваше время и силы.</details></p>
+<div id="темы-занятия" class="section level2">
+<h2><span class="header-section-number">3.1</span> Темы занятия</h2>
+<ul>
+<li>Хи-квадрат Пирсона.</li>
+<li>Точный критерий Фишера.</li>
+<li>Проверка на нормальность и гомогенность дисперсий. (Графические методы, Вероятностная бумага, Критерии Шапиро–Уилка и Колмогорова–Смирнова.)</li>
+<li>Критерий Стьюдента (t.test).</li>
+<li>Критерий U-Манна-Уитни + Вилкоксон.</li>
+</ul>
+<hr />
+<p>Нам понадобятся:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)
+<span class="kw">install.packages</span>(<span class="st">&quot;car&quot;</span>)
+<span class="kw">install.packages</span>(<span class="st">&quot;nortest&quot;</span>)</code></pre></div>
+<hr />
+<p>Используем датасет который предложил Иван Иванчей в моем любимом курсе по R <a href="https://stepik.org/course/129/syllabus" class="uri">https://stepik.org/course/129/syllabus</a></p>
+<ul>
+<li><code>npersons</code> - сколько человек в планируемом проекте</li>
+<li><code>years_in_uni</code> сколько лет провел в университете руководитель проекта</li>
+<li><code>oldest_age</code> - самый старый сортудник</li>
+<li><code>field</code> - облать исследования</li>
+<li><code>status</code> - поддержана ли заявка</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://stepic.org/media/attachments/lesson/11502/grants.csv&quot;</span>)
+df<span class="op">$</span>status &lt;-<span class="st"> </span><span class="kw">factor</span>(df<span class="op">$</span>status, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;Не поддержан&quot;</span>,<span class="st">&quot;Поддержан&quot;</span>)) 
+table.status &lt;-<span class="st"> </span><span class="kw">table</span>(df<span class="op">$</span>status) 
+table.field &lt;-<span class="st"> </span><span class="kw">table</span>(df<span class="op">$</span>status, df<span class="op">$</span>field) 
+table.field <span class="co"># поддержаные и неподдержаные заявки на грант в разных областях</span></code></pre></div>
+<pre><code>##               
+##                beh_cog bio chem physics soc
+##   Не поддержан     100 473   60      70  44
+##   Поддержан         65 432   66      78  32</code></pre>
+</div>
+<div id="хи-квадрат" class="section level2">
+<h2><span class="header-section-number">3.2</span> Хи квадрат</h2>
+<blockquote>
+<p>Критерий χ2 (“хи-квадрат”, также “Критерий согласия Пирсона”) - непараметрический метод, который позволяет оценить значимость различий между фактическим (выявленным в результате исследования) количеством исходов или качественных характеристик выборки, попадающих в каждую категорию, и теоретическим количеством, которое можно ожидать в изучаемых группах при справедливости нулевой гипотезы о отсутствии между ними различий.</p>
+</blockquote>
+<div id="требования" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Требования</h3>
+<p>Работает с категориальными переменными. На вход функции <code>chisq.test()</code> можно подать одномерную или двухмерную таблицу сопряженности. Использование возможно при n&gt;40 (в идеале n&gt;200).</p>
+</div>
+<div id="ограничения" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Ограничения</h3>
+<p>Ожидаемые частоты не должны быть очень малы, так как критерий хи-квадрат проверяет вероятности в каждой ячейке, то если ожидаемые частоты в ячейках становятся меньше 5 (есть мнение что 10), то эти вероятности нельзя оценить с достаточной точностью с помощью имеющихся частот. Критерий χ2 ошибается на выборках с низкочастотными (редкими) событиями. Решить эту проблему можно отбросив низкочастотные события, либо объединив их с другими событиями. Этот способ называется коррекцией Йетса (Yates’ correction).</p>
+</div>
+<div id="пример-использования" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Пример использования</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">chisq.test</span>(table.status)</code></pre></div>
+<pre><code>## 
+##  Chi-squared test for given probabilities
+## 
+## data:  table.status
+## X-squared = 3.8563, df = 1, p-value = 0.04956</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">chi &lt;-<span class="st"> </span><span class="kw">chisq.test</span>(table.status)
+chi<span class="op">$</span>exp <span class="co"># ожидаемые значения (если бы поддержки заявок распределялись случайно и равномерно)</span></code></pre></div>
+<pre><code>## Не поддержан    Поддержан 
+##          710          710</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">chi<span class="op">$</span>obs <span class="co"># наблюдаемые значения</span></code></pre></div>
+<pre><code>## 
+## Не поддержан    Поддержан 
+##          747          673</code></pre>
+</div>
+<div id="интерпритация" class="section level3">
+<h3><span class="header-section-number">3.2.4</span> Интерпритация</h3>
+<p>Нулевая гипотиза о равномерном распределении вероятностей поддержаных и неподдержаных грантов отвергается. Вероятность не получить поддержку заявки чуть выше.</p>
+<p>Посмотрим как обстоит дело с поддержкой заявок по разным областям науки. Отхиквадратим двухмерную таблицу сопряженности.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">chisq.test</span>(table.field)</code></pre></div>
+<pre><code>## 
+##  Pearson&#39;s Chi-squared test
+## 
+## data:  table.field
+## X-squared = 8.0601, df = 4, p-value = 0.0894</code></pre>
+<p>Как можно видеть распределение поддержки заявок по разным областям различается на уровне тенденции, но гипотзу о том, что различий в поддержке заявок между областями нет мы отвернуть не можем.</p>
+</div>
+<div id="визуализация" class="section level3">
+<h3><span class="header-section-number">3.2.5</span> Визуализация</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">barplot</span>(table.field, <span class="dt">legend.text =</span> <span class="ot">TRUE</span>, <span class="dt">args.legend =</span> <span class="kw">list</span>(<span class="dt">x =</span> <span class="st">&quot;topright&quot;</span>), <span class="dt">beside =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mosaicplot</span>(table.field)</code></pre></div>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-59-2.png" width="672" /></p>
+<p><strong>Опасная опасность!</strong> Не используйте столбчатые диаграммы (barplot) для визуализации средних значений. Такие графики могут вводить в заблуждения. В них подразумевается нулевой уровень что не имеет отношения к средним значениям. Графики Barplot используются для счетных данных.</p>
+</div>
+<div id="задание" class="section level3">
+<h3><span class="header-section-number">3.2.6</span> Задание:</h3>
+<p>При помощи точного критерия согласия Пирсона проверьте гипотезу о различии в поддержке заявок (<code>status</code>) в зависимости от колличества лет, проведенных в университете руководителем проекта (<code>years_in_uni</code>). Какой p-уровень значимости? <details><summary> Ответ </summary> 0.0787 </details></p>
+<hr />
+</div>
+</div>
+<div id="точный-тест-фишера" class="section level2">
+<h2><span class="header-section-number">3.3</span> Точный тест Фишера</h2>
+<blockquote>
+<p>Точный тест Фишера используется в анализе категориальных данных. Исследование значимости взаимосвязи между двумя переменными в факторной таблице размерности 2 x 2 для выборок маленьких размеров. <em>Не путать с критерием Фишера (который сравнивает дисперсии двух независимых выборок.)</em></p>
+</blockquote>
+<p>Критерий основан на переборе всех возможных вариантов заполнения таблицы сопряженности при имеющейся численности групп.</p>
+<div id="когда-применяют" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Когда применяют?</h3>
+<p>При небольшом числе наблюдений. Но в наши дни необязательно - у нас есть <strong>мощь R</strong> чтобы проводить его на большом колличестве наблюдений.</p>
+</div>
+<div id="требования-1" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Требования</h3>
+<p>Принимает на вход двухмерную таблицу сопряженности.</p>
+</div>
+<div id="пример-использования-1" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> Пример использования</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">fisher.test</span>(table.field)</code></pre></div>
+<pre><code>## 
+##  Fisher&#39;s Exact Test for Count Data
+## 
+## data:  table.field
+## p-value = 0.08921
+## alternative hypothesis: two.sided</code></pre>
+</div>
+<div id="задание-1" class="section level3">
+<h3><span class="header-section-number">3.3.4</span> Задание:</h3>
+<p>При помощи точного критерия Фишера проверьте гипотезу о взаимосвязи типа коробки передач (<code>am</code>) и типа двигателя (<code>vs</code>) в данных mtcars. Какой p-уровень значимости? <details><summary> Ответ </summary> 0.4727 </details></p>
+<hr />
+</div>
+</div>
+<div id="проверка-на-нормальность" class="section level2">
+<h2><span class="header-section-number">3.4</span> Проверка на нормальность</h2>
+<p>Величины, имеющие нормальное распределение, в реальных экспериментах возникают совершенно естественным образом, При измерении любой характеристики всегда имеется ошибка измерения. Если предполагать, что ошибка прибора имеет нормальное распределение, то среднее отвечает за систематическую ошибку, а дисперсия — за величину случайной ошибки.</p>
+<div class="figure">
+<img src="images/Normal_distribution_pdf.png" />
+
+</div>
+<p>График плотности вероятности нормального распределения и процент попадания случайной величины на отрезки, равные среднеквадратическому отклонению. <img src="images/Standard_deviation_diagram.png" /></p>
+<p>Некоторые критерии предпологают их использование только если выборка имеет нормальное распределение. Если это не так, то выводы, полученные на основе этих критериев, будут ошибочными.</p>
+<p>Что делать, если заранее известно, что выборки имеют другое распределение отличающееся от нормального? В таких случаях используются непараметрические критерии, т. е. свободные от предположения какой-либо параметрической модели данных. К сожалению, эти критерии оперируют гораздо меньшим «объёмом информации» и не смогут заметить такие тонкие различия, которые были бы обнаружены при использовании параметрических критериев, опирающихся на предположеие о нормальности распределения.</p>
+<p><strong>Как понять нормально ли распределены данные?</strong> Можно оценить на глаз, построив гисторамму или график квантилей:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;car&quot;</span>)</code></pre></div>
+<pre><code>## Warning: package &#39;car&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## Loading required package: carData</code></pre>
+<pre><code>## Warning: package &#39;carData&#39; was built under R version 3.5.2</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(<span class="kw">rnorm</span>(<span class="dv">100</span>)) <span class="co"># гистограмма нормального распределения выглядит примерно так</span></code></pre></div>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qqnorm</span>(<span class="kw">rnorm</span>(<span class="dv">100</span>)) <span class="co"># встроенная функция для построения графика квантилей</span></code></pre></div>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-61-2.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qqPlot</span>(<span class="kw">rnorm</span>(<span class="dv">100</span>)) <span class="co"># значения нормального распределения сильно не выходят за пунктирную линию и выстраиваются вдоль центральной линии</span></code></pre></div>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-61-3.png" width="672" /></p>
+<pre><code>## [1] 97 37</code></pre>
+<blockquote>
+<p>Вероятностная бумага (диаграмма Вейбула) – это специальный бланк, разлинованный таким образом, что кумулятивная функция нормального закона на нем приближается к прямой линии.</p>
+</blockquote>
+<p>Если график на диаграмме представлен набором точек, которые рассеянны около прямой линии, то это позволяет предположить, что генеральная совокупность, из которой взята выборка, подчиняется нормальному закону распределения случайной величины. Если точки аппроксимируются в кривую линию, то распределение параметра X отличается от нормального и при этом можно оценить кривизну и асимметрию функции плотности распределения.</p>
+<div class="figure">
+<img src="images/вербумага.jpg" />
+
+</div>
+<p>Но прикидки на глаз обычно не столь хороши как статистические тесты, поэтому разберем некоторые из них.</p>
+<p>Но сперва познакомимся с датасетом на котором дальше мы будем разбирать примеры - <code>iris</code>. Он описывает длинну и ширину лепестка и чашелистика 50 цветков ириса. <img src="images/iris.jpg" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df1 &lt;-<span class="st"> </span><span class="kw">subset</span>(iris, Species <span class="op">!=</span><span class="st"> &quot;setosa&quot;</span>) <span class="co"># возьмем 2 вида цветков потому что для t-test нужнен групирующий фактор с 2 уровенями.</span>
+<span class="kw">str</span>(df1)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    100 obs. of  5 variables:
+##  $ Sepal.Length: num  7 6.4 6.9 5.5 6.5 5.7 6.3 4.9 6.6 5.2 ...
+##  $ Sepal.Width : num  3.2 3.2 3.1 2.3 2.8 2.8 3.3 2.4 2.9 2.7 ...
+##  $ Petal.Length: num  4.7 4.5 4.9 4 4.6 4.5 4.7 3.3 4.6 3.9 ...
+##  $ Petal.Width : num  1.4 1.5 1.5 1.3 1.5 1.3 1.6 1 1.3 1.4 ...
+##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 2 2 2 2 2 2 2 2 2 2 ...</code></pre>
+<p>Посмотрим на форму распределения длинны чашелистика в зависимости от вида ириса:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</code></pre></div>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.5.3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(df1<span class="op">$</span>Sepal.Length) <span class="co"># схематично, сбоку </span></code></pre></div>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(df1, <span class="kw">aes</span>(Sepal.Length, <span class="dt">fill =</span> Species))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.5</span>) <span class="co"># информативно, сбоку</span></code></pre></div>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-63-2.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(df1, <span class="kw">aes</span>(Species, Sepal.Length))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>() <span class="co"># можно сказачать что взгляд сверху</span></code></pre></div>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-63-3.png" width="672" /></p>
+<hr />
+<div id="критерии-шапироуилка" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Критерии Шапиро–Уилка</h3>
+<p>Один из тестов которые проверяют происходит ли анаизируемая выборка из генеральной совокупности имеющей нормальное распределение является Критерии Шапиро–Уилка. Если получаемая при помощи того или иного теста вероятность ошибки Р оказывается меньше некоторого заранее принятого уровня значимости (например, 0.05), нулевая гипотеза отклоняется и мы отвергаем гипотезу о нормальности распределения.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">shapiro.test</span>(df1<span class="op">$</span>Sepal.Length) <span class="co"># p &gt; 0.05 - нулевая гипотиза не отвергается, предпологаем что параметр распределен нормально.</span></code></pre></div>
+<pre><code>## 
+##  Shapiro-Wilk normality test
+## 
+## data:  df1$Sepal.Length
+## W = 0.98054, p-value = 0.1464</code></pre>
+<p>Можно провести проверку на нормальность переменной в разных группах с помощью функции <code>by()</code>. Проверка на нормальность переменной Sepal.Length в трех разных группах в соответствии с переменной Species:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">by</span>(iris<span class="op">$</span>Sepal.Length, <span class="dt">INDICES =</span> iris<span class="op">$</span>Species, shapiro.test) </code></pre></div>
+<pre><code>## iris$Species: setosa
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  dd[x, ]
+## W = 0.9777, p-value = 0.4595
+## 
+## ------------------------------------------------------------ 
+## iris$Species: versicolor
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  dd[x, ]
+## W = 0.97784, p-value = 0.4647
+## 
+## ------------------------------------------------------------ 
+## iris$Species: virginica
+## 
+##  Shapiro-Wilk normality test
+## 
+## data:  dd[x, ]
+## W = 0.97118, p-value = 0.2583</code></pre>
+<hr />
+</div>
+<div id="критерий-колмогоровасмирнова" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Критерий Колмогорова–Смирнова</h3>
+<p>Поскольку стандартный Критерий Колмагорова-Смирнова может проверять гипотизы соответствия выборки некоторому заданному закону распределения, при использовании его нужно указать с каким распределением проводится сравнение, среднее значение и стандартное отклоенение.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(df1<span class="op">$</span>Sepal.Length) <span class="co"># среднее для выборки</span></code></pre></div>
+<pre><code>## [1] 6.262</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(df1<span class="op">$</span>Sepal.Length) <span class="co"># стандартное отклонение</span></code></pre></div>
+<pre><code>## [1] 0.6628344</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ks.test</span>(df1<span class="op">$</span>Sepal.Length, <span class="st">&quot;pnorm&quot;</span>, <span class="dt">mean =</span> <span class="fl">6.262</span>, <span class="dt">sd =</span> <span class="fl">0.6628344</span>) <span class="co"># не уверен что сюда нужно ставить реальные значния а не &quot;теоретические&quot;. Пожалуйста, поправте меня.</span></code></pre></div>
+<pre><code>## Warning in ks.test(df1$Sepal.Length, &quot;pnorm&quot;, mean = 6.262, sd = 0.6628344):
+## ties should not be present for the Kolmogorov-Smirnov test</code></pre>
+<pre><code>## 
+##  One-sample Kolmogorov-Smirnov test
+## 
+## data:  df1$Sepal.Length
+## D = 0.067538, p-value = 0.7517
+## alternative hypothesis: two-sided</code></pre>
+<p>Но лучше, если нам не известны мат. ожидание и дисперсия (а так оно обычно и есть), использовать модификацию этого критерия - Критерий Лиллиефорса который реализован в пакете <code>nortest</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;nortest&quot;</span>)</code></pre></div>
+<pre><code>## Warning: package &#39;nortest&#39; was built under R version 3.5.2</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lillie.test</span>(df1<span class="op">$</span>Sepal.Length)</code></pre></div>
+<pre><code>## 
+##  Lilliefors (Kolmogorov-Smirnov) normality test
+## 
+## data:  df1$Sepal.Length
+## D = 0.067538, p-value = 0.3169</code></pre>
+</div>
+<div id="проверка-однородности-гомогенности-дисперсий." class="section level3">
+<h3><span class="header-section-number">3.4.3</span> Проверка однородности (гомогенности) дисперсий.</h3>
+<p>Для проверки однородности дисперсий существует например Тест Бартлетта.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">bartlett.test</span>(Sepal.Length <span class="op">~</span><span class="st"> </span>Species, df1)</code></pre></div>
+<pre><code>## 
+##  Bartlett test of homogeneity of variances
+## 
+## data:  Sepal.Length by Species
+## Bartlett&#39;s K-squared = 2.0949, df = 1, p-value = 0.1478</code></pre>
+<p>Как видно по p-value дисперсии этих групп однородны.</p>
+<p>При выявлении существенной неоднородности дисперсии возможны два решения: определенное преобразование исходных данных (например, логарифмирование) или использование моделей, допускающих неоднородность дисперсии.</p>
+<hr />
+</div>
+</div>
+<div id="критерий-стьюдента-t-test" class="section level2">
+<h2><span class="header-section-number">3.5</span> Критерий Стьюдента (t-test)</h2>
+<blockquote>
+<p>t-критерий Стьюдента — общее название для класса методов статистической проверки гипотез (статистических критериев), основанных на распределении Стьюдента. Наиболее частые случаи применения t-критерия связаны с проверкой равенства средних значений в двух выборках.</p>
+</blockquote>
+<p>В одном случае его применяют для проверки гипотезы о равенстве генеральных средних двух независимых, несвязанных выборок (так называемый двухвыборочный t-критерий). В этом случае есть контрольная группа и экспериментальная (опытная) группа, количество испытуемых в группах может быть различно.</p>
+<p>Во втором случае, когда одна и та же группа объектов порождает числовой материал для проверки гипотез о средних, используется так называемый парный t-критерий. Выборки при этом называют зависимыми, связанными.</p>
+<div id="метод-реализации" class="section level3">
+<h3><span class="header-section-number">3.5.1</span> Метод реализации</h3>
+<p>Критерий позволяет найти вероятность того, что оба средних значения в выборке относятся к одной и той же совокупности. Данный критерий наиболее часто используется для проверки гипотезы: «Средние двух выборок относятся к одной и той же совокупности».</p>
+<p>T-статистика строится обычно по следующему общему принципу: в числителе случайная величина с нулевым математическим ожиданием (при выполнении нулевой гипотезы), а в знаменателе — выборочное стандартное отклонение этой случайной величины, получаемое как квадратный корень из несмещённой оценки дисперсии.</p>
+</div>
+<div id="требования-2" class="section level3">
+<h3><span class="header-section-number">3.5.2</span> Требования</h3>
+<ol style="list-style-type: decimal">
+<li>Для применения данного критерия необходимо, чтобы исходные данные имели нормальное распределение.</li>
+<li>В случае применения двухвыборочного критерия для независимых выборок также необходимо соблюдение условия равенства дисперсий.</li>
+</ol>
+</div>
+<div id="ограничения-1" class="section level3">
+<h3><span class="header-section-number">3.5.3</span> Ограничения</h3>
+<p>Чувствителен к выборосам. Буквально пара сильных выбросов может убить весь p-value.</p>
+</div>
+<div id="пример-использования-2" class="section level3">
+<h3><span class="header-section-number">3.5.4</span> Пример использования</h3>
+<p>Для Критерия Стьюдента с независимыми выборками на вход необходимо подать две переменные, одна колличественая а другая номенальная представленная в качестве фактора из двух уровенй.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">t.test</span>(Sepal.Length <span class="op">~</span><span class="st"> </span>Species, df1)</code></pre></div>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  Sepal.Length by Species
+## t = -5.6292, df = 94.025, p-value = 1.866e-07
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -0.8819731 -0.4220269
+## sample estimates:
+## mean in group versicolor  mean in group virginica 
+##                    5.936                    6.588</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="fl">1.866e-07</span> <span class="op">==</span><span class="st"> </span><span class="fl">0.0000001866</span> <span class="co"># e-07 = умножение на 10 в минус 7 степени (добавили 6 нулей после запятой)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+<div id="интерпритация-1" class="section level3">
+<h3><span class="header-section-number">3.5.5</span> Интерпритация:</h3>
+<p>Так как p-уровень меньше 0.05 то мы можем отклонить нулевую гипотизу о равенстве средних.</p>
+</div>
+<div id="дополнительные-параметры" class="section level3">
+<h3><span class="header-section-number">3.5.6</span> Дополнительные параметры</h3>
+<p>Тип альтернативной гипотизы - односторонний или двухсторонний (<code>alternative</code>). Тест для зависимых или независимых выборок (<code>paired</code>). Выполняется ли условие гомогенности дисперсий (<code>var.equal = TRUE</code>); Или t-критерий в модификации Уэлча (Welch), свободный от этого предположения (<code>var.equal = FALSE</code>, по умолчанию).</p>
+<p>Проведем одновыборочный t.test чтобы проверить сравнить “теоретическое среднее” с наблюдаемым.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">t.test</span>(df1<span class="op">$</span>Sepal.Length, <span class="dt">mu =</span> <span class="dv">8</span>) <span class="co"># проверим равняется ли среднее в генеральной совокупности 8?</span></code></pre></div>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  df1$Sepal.Length
+## t = -26.221, df = 99, p-value &lt; 2.2e-16
+## alternative hypothesis: true mean is not equal to 8
+## 95 percent confidence interval:
+##  6.130479 6.393521
+## sample estimates:
+## mean of x 
+##     6.262</code></pre>
+</div>
+<div id="задание-2" class="section level3">
+<h3><span class="header-section-number">3.5.7</span> Задание:</h3>
+<p>C помощью Критерия Стьюдента проверьте на данных <code>df1</code> гипотизу что в генеральной совокупности средняя длинна чашелистика равняется 6.2. Какой p-value? <details><summary> Ответ </summary> 0.3519 </details></p>
+<p>Критерий стьюдента можно применять для зависимых переменных. Для этого эти переменные должны быть колличественные и подаваться на вход как два отдельных вектора значений. Проверим что длинна и ширина чашелистика не равны.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">t.test</span>(df1<span class="op">$</span>Sepal.Length, df1<span class="op">$</span>Sepal.Width, <span class="dt">paired =</span> <span class="ot">TRUE</span>) </code></pre></div>
+<pre><code>## 
+##  Paired t-test
+## 
+## data:  df1$Sepal.Length and df1$Sepal.Width
+## t = 61.307, df = 99, p-value &lt; 2.2e-16
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  3.280282 3.499718
+## sample estimates:
+## mean of the differences 
+##                    3.39</code></pre>
+</div>
+<div id="визуализация." class="section level3">
+<h3><span class="header-section-number">3.5.8</span> Визуализация.</h3>
+<p>Чтобы отобразить на графике сравнение двух средних с доверительными интервалами можно применить <code>stat_summary()</code> добавленную к <code>ggplot</code>. Различия в средних и доверительных интервалах длины лепестка между двумя видами ирисов:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(df1, <span class="kw">aes</span>(Species, Sepal.Length))<span class="op">+</span>
+<span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">fun.data =</span> mean_cl_normal, <span class="dt">geom =</span> <span class="st">&quot;pointrange&quot;</span>, <span class="dt">size =</span> <span class="dv">2</span>)<span class="co"># mean_cl_normal встроенная в ggplot функция подсчета среднего.</span></code></pre></div>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<hr />
+</div>
+</div>
+<div id="критерий-u-манна-уитни-и-вилкоксона" class="section level2">
+<h2><span class="header-section-number">3.6</span> Критерий U-Манна-Уитни и Вилкоксона</h2>
+<blockquote>
+<p>U-критерий Манна — Уитни — Уилкоксона (англ. Mann–Whitney U-test) — статистический критерий, используемый для оценки различий между двумя независимыми выборками по уровню какого-либо признака, измеренного количественно. Позволяет выявлять различия в значении параметра между малыми выборками.</p>
+</blockquote>
+<p>Критерий переводит все данные в ранговую шкалу (уходит от реальных значений признака и ранжирует все показатели от первого до последнего наблюдения) а затем считает какой средний ранг оказался в первой группе, а какой во второй.</p>
+<p>Создатели системы R под названием “критерий Уилкоксона” (или “тест Уилкоксона”) объединяют как собственно метод, предложенный Фрэнком Уилкоксоном (Frank Wilcoxon) в 1945 г., так и опубликованный несколько позднее (1947 г.) метод Манна-Уитни. Первый из этих методов обычно используется для сравнения двух связных выборок, тогда как второй предназначен для сравнения двух независимых выборок.</p>
+<div id="метод-реализации-1" class="section level3">
+<h3><span class="header-section-number">3.6.1</span> Метод реализации</h3>
+<p>Для двух независимых выборок все имеющиеся значения ранжируют, игнорируя их знак; Ранги значений, принадлежащих к первой группе, суммируют, получая величину W; Полученное W сравнивают со значением, которое можно было бы ожидать при верной нулевой гипотезе и имеющемся числе степеней свободы; альтернативный подход - находят вероятность случайным образом получить значение W, равное или превышающее наблюдаемое значение (при условии истинности нулевой гипотезы).</p>
+<p>Сравнение зависимых выборок выборок при помощи критерия Уилкоксона происходит сходно с тем, как это делается при помощи парного критерия Стьюдента. В частности, находят разницу между всеми имеющимися парными выборочными наблюдениями с целью проверить нулевую гипотезу о том, что медиана полученных разностей равна нулю (либо какому-либо другому, отличному от нуля значению).</p>
+</div>
+<div id="когда-используют" class="section level3">
+<h3><span class="header-section-number">3.6.2</span> Когда используют?</h3>
+<p>Если не выполняется одно из требований для критерия Стьюдента, не очень много данных или не очень нормальное распределение. Непараметрические аналог t.test. Гораздо менее чувствителен к выбросам чем критерий Стьюдента.</p>
+</div>
+<div id="ограничения-2" class="section level3">
+<h3><span class="header-section-number">3.6.3</span> Ограничения</h3>
+<ol style="list-style-type: decimal">
+<li>В каждой из выборок должно быть не менее 3 значений признака. Допускается, чтобы в одной выборке было два значения, но во второй тогда не менее пяти.</li>
+<li>В выборочных данных не должно быть совпадающих значений (все числа — разные) или таких совпадений должно быть очень мало (до 10).</li>
+<li>В каждой выборке должно быть не более 60 наблюдений;</li>
+</ol>
+</div>
+<div id="пример-использования-3" class="section level3">
+<h3><span class="header-section-number">3.6.4</span> Пример использования</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wilcox.test</span>(df1<span class="op">$</span>Petal.Length <span class="op">~</span><span class="st"> </span>Species, df1)</code></pre></div>
+<pre><code>## 
+##  Wilcoxon rank sum test with continuity correction
+## 
+## data:  df1$Petal.Length by Species
+## W = 44.5, p-value &lt; 2.2e-16
+## alternative hypothesis: true location shift is not equal to 0</code></pre>
+</div>
+<div id="интерпритация-2" class="section level3">
+<h3><span class="header-section-number">3.6.5</span> Интерпритация</h3>
+<p>Длинны лепестков между видами ирисов статистически значимо различаются.</p>
+<p>Также как и для <code>t.test()</code> существует <code>wilcox.test()</code> для зависимых переменных. Форма записи такая же как в критерии Стьюдента.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wilcox.test</span>(df1<span class="op">$</span>Petal.Length, df1<span class="op">$</span>Petal.Width, <span class="dt">paired =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<pre><code>## 
+##  Wilcoxon signed rank test with continuity correction
+## 
+## data:  df1$Petal.Length and df1$Petal.Width
+## V = 5050, p-value &lt; 2.2e-16
+## alternative hypothesis: true location shift is not equal to 0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">wilcox.test</span>(df1<span class="op">$</span>Petal.Length, df1<span class="op">$</span>Petal.Width, <span class="dt">conf.int =</span> <span class="ot">TRUE</span>) <span class="co"># оценка различия в сдвиге между двумя выборками и доверительный интервал для него</span></code></pre></div>
+<pre><code>## 
+##  Wilcoxon rank sum test with continuity correction
+## 
+## data:  df1$Petal.Length and df1$Petal.Width
+## W = 10000, p-value &lt; 2.2e-16
+## alternative hypothesis: true location shift is not equal to 0
+## 95 percent confidence interval:
+##  3.000057 3.399983
+## sample estimates:
+## difference in location 
+##               3.200054</code></pre>
+<p>Как видим эти характеристики лепестка не равны.</p>
+</div>
+<div id="визуализация-1" class="section level3">
+<h3><span class="header-section-number">3.6.6</span> Визуализация</h3>
+<p>Чтобы отобразить на графике сравнение двух средних с доверительными интервалами можно применить <code>stat_summary()</code> добавленную к <code>ggplot</code>. Различия в средних и доверительных интервалах длины лепестка между двумя видами ирисов:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(df1, <span class="kw">aes</span>(Species, Petal.Length))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre></div>
+<p><img src="blastim_rstats_bookdown_files/figure-html/unnamed-chunk-75-1.png" width="672" /></p>
+</div>
+<div id="задание-3" class="section level3">
+<h3><span class="header-section-number">3.6.7</span> Задание:</h3>
+<p>Обьясните, почему мы по разному визуализируем данные Критерия Стьюдента и данные Критерия Вилкоксона-Манна-Утни?</p>
+</div>
+</div>
+<div id="выбор-критерия" class="section level2">
+<h2><span class="header-section-number">3.7</span> Выбор критерия:</h2>
+<div class="figure">
+<img src="images/выбор.png" />
+
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chastoty.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["blastim_rstats_bookdown.pdf", "blastim_rstats_bookdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
